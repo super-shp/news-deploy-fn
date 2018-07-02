@@ -669,6 +669,18 @@
   version "9.6.22"
   resolved "http://npm.byted.org/@types%2fnode/-/node-9.6.22.tgz#05b55093faaadedea7a4b3f76e9a61346a6dd209"
 
+"@types/vue-router@^2.0.0":
+  version "2.0.0"
+  resolved "http://npm.byted.org/@types%2fvue-router/-/vue-router-2.0.0.tgz#81094f2107e766a11b20af7fa0f34bec1f321e28"
+  dependencies:
+    vue-router "*"
+
+"@types/vue@^2.0.0":
+  version "2.0.0"
+  resolved "http://npm.byted.org/@types%2fvue/-/vue-2.0.0.tgz#ec77b3d89591deb9ca5cb052368aa9c32be088e7"
+  dependencies:
+    vue "*"
+
 "@vue/babel-preset-app@^3.0.0-rc.3":
   version "3.0.0-rc.3"
   resolved "http://npm.byted.org/@vue%2fbabel-preset-app/-/babel-preset-app-3.0.0-rc.3.tgz#e4f5f884448489b1b4651c986548639f3bec823f"
@@ -6978,7 +6990,7 @@ vue-property-decorator@^6.0.0:
     reflect-metadata "^0.1.10"
     vue-class-component "^6.1.0"
 
-vue-router@^3.0.1:
+vue-router@*, vue-router@^3.0.1:
   version "3.0.1"
   resolved "http://npm.byted.org/vue-router/-/vue-router-3.0.1.tgz#d9b05ad9c7420ba0f626d6500d693e60092cc1e9"
 
@@ -7000,7 +7012,7 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "http://npm.byted.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue@^2.5.16:
+vue@*, vue@^2.5.16:
   version "2.5.16"
   resolved "http://npm.byted.org/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
 
