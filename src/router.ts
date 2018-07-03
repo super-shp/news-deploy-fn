@@ -1,21 +1,15 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from './views/Home.vue';
-import About from './views/About.vue';
+import { default as Vue } from 'vue';
+import { default as Router } from 'vue-router';
+import { MainPage } from '@/pages/MainPage';
 
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About,
-    },
-  ],
+	routes: [
+		{
+			path: '/',
+			name: 'home',
+			component: MainPage,
+		},
+	],
 });
