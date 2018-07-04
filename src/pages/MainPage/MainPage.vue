@@ -1,10 +1,16 @@
 <template>
-<h1>just a test for main pages</h1>
+<div>
+  <h1>just a test for main page</h1>
+  <p>{{msg}}</p>
+  <Button status="primary" loading>你好</Button>
+</div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Inject } from 'vue-property-decorator';
 
 @Component
-export default class MainPage extends Vue {}
+export default class MainPage extends Vue {
+  private msg: string = 'try this ts?';
+}
 </script>

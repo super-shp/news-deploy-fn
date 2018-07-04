@@ -4,12 +4,13 @@ import { MainPage } from '@/pages/MainPage';
 
 Vue.use(Router);
 
-export default new Router({
-	routes: [
-		{
-			path: '/',
-			name: 'home',
-			component: MainPage,
-		},
-	],
-});
+export const routerCreator = (): Router =>
+  new Router({
+    routes: [
+      {
+        path: '/',
+        name: 'home',
+        component: MainPage,
+      },
+    ],
+  });
