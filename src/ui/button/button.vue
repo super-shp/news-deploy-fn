@@ -17,7 +17,20 @@ const TYPE: {
   text: 'is-text',
 };
 
-export default Vue.extend({
+export default Vue.extend<
+  {},
+  {},
+  {
+    classes: () => {
+      [index: string]: boolean;
+    };
+  },
+  {
+    status: string;
+    loading?: boolean;
+    disabled?: boolean;
+  }
+>({
   name: 'iButton',
   props: {
     status: String,
