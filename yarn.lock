@@ -642,10 +642,6 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
-"@fortawesome/fontawesome-free@^5.1.0":
-  version "5.1.0"
-  resolved "http://npm.byted.org/@fortawesome%2ffontawesome-free/-/fontawesome-free-5.1.0.tgz#f35f5ba91366b7a58b0b6a4f22ff0907fe002219"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "http://npm.byted.org/@mrmlnc%2freaddir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -656,6 +652,12 @@
 "@nodelib/fs.stat@^1.0.1":
   version "1.1.0"
   resolved "http://npm.byted.org/@nodelib%2ffs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
+
+"@types/axios@^0.14.0":
+  version "0.14.0"
+  resolved "http://npm.byted.org/@types%2faxios/-/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
+  dependencies:
+    axios "*"
 
 "@types/chai@^4.1.0":
   version "4.1.4"
@@ -1276,6 +1278,13 @@ aws-sign2@~0.7.0:
 aws4@^1.2.1, aws4@^1.6.0:
   version "1.7.0"
   resolved "http://npm.byted.org/aws4/-/aws4-1.7.0.tgz#d4d0e9b9dbfca77bf08eeb0a8a471550fe39e289"
+
+axios@*, axios@^0.18.0:
+  version "0.18.0"
+  resolved "http://npm.byted.org/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  dependencies:
+    follow-redirects "^1.3.0"
+    is-buffer "^1.1.5"
 
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -2951,6 +2960,12 @@ flush-write-stream@^1.0.0:
 follow-redirects@^1.0.0:
   version "1.5.0"
   resolved "http://npm.byted.org/follow-redirects/-/follow-redirects-1.5.0.tgz#234f49cf770b7f35b40e790f636ceba0c3a0ab77"
+  dependencies:
+    debug "^3.1.0"
+
+follow-redirects@^1.3.0:
+  version "1.5.1"
+  resolved "http://npm.byted.org/follow-redirects/-/follow-redirects-1.5.1.tgz#67a8f14f5a1f67f962c2c46469c79eaec0a90291"
   dependencies:
     debug "^3.1.0"
 
