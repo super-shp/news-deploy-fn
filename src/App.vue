@@ -21,3 +21,4 @@ import { Header, Console } from './layout/header';
 })
 export default class App extends Vue {}
 </script>
+

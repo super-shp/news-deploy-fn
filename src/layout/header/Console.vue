@@ -1,7 +1,13 @@
 <template>
   <div class="console">
     <a href="javascript:void(0)" class="menu">
-      <Icon icon="home"/>
+      <Icon icon="pencil"/>
+    </a>
+    <a href="javascript:void(0)" class="menu">
+      <Icon icon="magnify"/>
+    </a>
+    <a href="javascript:void(0)" class="menu">
+      <Icon icon="bell"/>
     </a>
   </div>
 </template>

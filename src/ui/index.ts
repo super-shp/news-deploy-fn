@@ -2,6 +2,7 @@ import { default as Vue } from 'vue';
 import { Button } from './button';
 import { default as Buefy } from 'buefy';
 import 'buefy/lib/buefy.css';
+import './style.scss';
 
 const { Icon } = Buefy as any;
 
