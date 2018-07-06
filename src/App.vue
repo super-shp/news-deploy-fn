@@ -1,22 +1,17 @@
 <template>
   <div id="app">
-    <Header>
-      <template slot="console">
-        <Console />
-      </template>
-    </Header>
+    <Header />
     <router-view/>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import { Header, Console } from './layout/Header';
+import { Header } from './layout/Header';
 
 @Component({
   components: {
     Header,
-    Console,
   },
 })
 export default class App extends Vue {}

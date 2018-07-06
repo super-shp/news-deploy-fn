@@ -5,7 +5,7 @@
         <div class="inner">
           <a class="logo"></a>
           <div class="console-position">
-            <slot name="console"></slot>
+            <Console />
           </div>
         </div>
       </header>
@@ -15,7 +15,13 @@
 
 <script lang="ts">
 import Vue from 'vue';
-export default Vue.extend({});
+import { default as Console } from './Console.vue';
+
+export default Vue.extend({
+  components: {
+    Console,
+  },
+});
 </script>
 
 
