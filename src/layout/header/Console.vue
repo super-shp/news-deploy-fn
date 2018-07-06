@@ -27,7 +27,12 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { default as Search } from './Search.vue';
+
 export default Vue.extend({
+  components: {
+    Search,
+  },
   props: {
     username: String,
   },
