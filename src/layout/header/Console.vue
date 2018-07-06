@@ -3,18 +3,51 @@
     <a href="javascript:void(0)" class="menu">
       <Icon icon="pencil"/>
     </a>
-    <a href="javascript:void(0)" class="menu">
-      <Icon icon="magnify"/>
-    </a>
+    <Search class="menu" />
     <a href="javascript:void(0)" class="menu">
       <Icon icon="bell"/>
     </a>
+    <Dropdown>
+      <a class="selfinfo-trigger" slot="trigger">
+        <span>{{getUserName}}</span>
+        <Icon icon="menu-down"></Icon>
+      </a>
+
+      <div v-if="!getLoginStatus">
+        <DropdownItem>登陆</DropdownItem>
+        <DropdownItem>注册</DropdownItem>
+      </div>
+      <div v-else>
+        <DropdownItem>个人中心</DropdownItem>
+        <DropdownItem>退出登录</DropdownItem>
+      </div>
+    </Dropdown>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-export default Vue.extend({});
+export default Vue.extend({
+  props: {
+    username: String,
+  },
+  computed: {
+    getLoginStatus(): boolean {
+      if (window.localStorage.getItem('loginToken')) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    getUserName(): string {
+      if (this.username) {
+        return this.username;
+      } else {
+        return '未登录';
+      }
+    },
+  },
+});
 </script>
 
 
@@ -28,6 +61,15 @@ export default Vue.extend({});
   .menu {
     margin-left: 20px;
     vertical-align: middle;
+  }
+
+  .selfinfo-trigger {
+    margin-left: 20px;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }
 </style>

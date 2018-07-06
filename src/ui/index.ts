@@ -1,12 +1,22 @@
 import { default as Vue } from 'vue';
-import { Button } from './button';
 import { default as Buefy } from 'buefy';
+import { Button } from './button';
+import { Search } from './search';
 import 'buefy/lib/buefy.css';
 import './style.scss';
 
-const { Icon } = Buefy as any;
+const {
+  Icon,
+  Dropdown,
+  DropdownItem,
+  Input,
+} = Buefy as any;
 
 export const initUI = () => {
   Vue.component('Icon', Icon);
   Vue.component('Button', Button);
+  Vue.component('Search', Search);
+  Vue.component('Dropdown', Dropdown);
+  Vue.component('DropdownItem', DropdownItem);
+  Vue.component('Input', Input);
 };
