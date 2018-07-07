@@ -23,7 +23,6 @@
 <script lang="ts">
 import Vue from 'vue';
 import { default as Console } from './Console.vue';
-import { findParentComponent } from '@/util/index';
 
 export default Vue.extend({
   components: {
