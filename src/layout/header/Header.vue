@@ -9,6 +9,9 @@
           </div>
         </div>
       </header>
+      <div>
+        {{isTop}}
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +23,9 @@ import { default as Console } from './Console.vue';
 export default Vue.extend({
   components: {
     Console,
+  },
+  props: {
+    isTop: Boolean,
   },
 });
 </script>
