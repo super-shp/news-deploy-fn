@@ -3,10 +3,11 @@ import { initUI } from './ui';
 import { default as App } from './App.vue';
 import { routerCreator } from './router';
 import { storeCreator } from './store';
+import { mountConfig } from './vueConfig';
 
-Vue.config.productionTip = false;
+mountConfig(Vue);
+initUI(Vue);
 
-initUI();
 new Vue({
   router: routerCreator(),
   store: storeCreator(),

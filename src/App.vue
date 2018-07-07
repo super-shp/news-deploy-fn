@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <Header />
-    <router-view/>
+    <Container>
+      <Header slot="header" />
+      <router-view slot="content" />
+    </Container>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import { Header } from './layout/Header';
+import { Header, Container } from './layout';
 
 @Component({
   components: {
+    Container,
     Header,
   },
 })

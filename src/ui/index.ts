@@ -1,4 +1,4 @@
-import { default as Vue } from 'vue';
+import { VueConstructor } from 'vue';
 import { default as Buefy } from 'buefy';
 import { Button } from './button';
 import 'buefy/lib/buefy.css';
@@ -11,7 +11,7 @@ const {
   Input,
 } = Buefy as any;
 
-export const initUI = () => {
+export const initUI = (Vue: VueConstructor) => {
   Vue.component('Icon', Icon);
   Vue.component('Button', Button);
   Vue.component('Dropdown', Dropdown);
