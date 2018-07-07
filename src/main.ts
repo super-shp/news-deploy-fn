@@ -5,7 +5,9 @@ import { routerCreator } from './router';
 import { storeCreator } from './store';
 import { mountConfig } from './vueConfig';
 
+// set config by env
 mountConfig(Vue);
+// regist ui
 initUI(Vue);
 
 new Vue({
