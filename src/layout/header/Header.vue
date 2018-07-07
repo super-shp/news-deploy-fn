@@ -52,9 +52,9 @@ export default Vue.extend({
       const dom: HTMLElement = this.$el;
       const rect: ClientRect = dom.getBoundingClientRect();
       const { top } = rect;
-      if (top > -100 && !this.isTop) {
+      if (top > -20 && !this.isTop) {
         this.isTop = true;
-      } else if (top <= -100 && this.isTop) {
+      } else if (top <= -20 && this.isTop) {
         this.isTop = false;
       }
     },
