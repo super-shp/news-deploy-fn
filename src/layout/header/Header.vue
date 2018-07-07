@@ -9,9 +9,13 @@
           </div>
         </div>
       </header>
-      <div>
-        {{isTop}}
-      </div>
+      <nav class="column-nav" v-show="isTop">
+        <ul class="column-list">
+          <li class="column-item" v-for="item in columnList">
+            <a>{{item}}</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </template>
@@ -19,13 +23,44 @@
 <script lang="ts">
 import Vue from 'vue';
 import { default as Console } from './Console.vue';
+import { findParentComponent } from '@/util/index';
 
 export default Vue.extend({
   components: {
     Console,
   },
-  props: {
-    isTop: Boolean,
+  data() {
+    return {
+      isTop: true as boolean,
+      columnList: [
+        '专题广场',
+        'Matrix',
+        '付费栏目',
+        '效率工具',
+        '手机摄影',
+        '生活方式',
+        '游戏',
+        '硬件',
+      ] as string[],
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.setPositionScrolling);
+  },
+  methods: {
+    setPositionScrolling() {
+      const dom: HTMLElement = this.$el;
+      const rect: ClientRect = dom.getBoundingClientRect();
+      const { top } = rect;
+      if (top > -100 && !this.isTop) {
+        this.isTop = true;
+      } else if (top <= -100 && this.isTop) {
+        this.isTop = false;
+      }
+    },
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.setPositionScrolling);
   },
 });
 </script>
@@ -39,6 +74,7 @@ export default Vue.extend({
     position: fixed;
     width: 100%;
     transition: all 0.3s;
+    z-index: 1;
 
     header {
       background-color: #292525;
@@ -60,6 +96,46 @@ export default Vue.extend({
           margin: 11px 0;
           width: 108px;
           font-size: 0;
+        }
+      }
+    }
+
+    .column-nav {
+      box-shadow: 0 2px 0 rgba(41, 67, 73, 0.01) 0 1px 0 rgba(0, 0, 0, 0.12);
+      transition: all 0.5s;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+      .column-list {
+        width: 1110px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        font-size: 14px;
+
+        .column-item {
+          flex: 1;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          margin-bottom: -1px;
+
+          a {
+            display: block;
+            border-left: 1px solid rgba(0, 0, 0, 0.12);
+            color: #292525;
+            font-weight: 700;
+
+            &:hover {
+              color: #d7191a;
+            }
+          }
+
+          &:last-of-type a {
+            border-right: 1px solid rgba(0, 0, 0, 0.12);
+          }
         }
       }
     }
