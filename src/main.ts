@@ -9,9 +9,13 @@ import { mountConfig } from './vueConfig';
 mountConfig(Vue);
 // regist ui
 initUI(Vue);
+// create router
+const router = routerCreator();
+// create store
+const store = storeCreator();
 
 new Vue({
-  router: routerCreator(),
-  store: storeCreator(),
+  router,
+  store,
   render: h => h(App),
 }).$mount('#app');
