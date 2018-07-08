@@ -17,7 +17,7 @@ export default Vue.extend({
   },
   data() {
     return {
-      content: convert('\n'),
+      content: convert('你好'),
     };
   },
 });

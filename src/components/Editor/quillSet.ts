@@ -1,8 +1,8 @@
 import { default as Quill } from 'quill';
-import { ImageDrop } from 'quill-image-drop-module';
+import { ImageDropper } from './module';
 import ImageResize from 'quill-image-resize-module';
 
-Quill.register('modules/imageDrop', ImageDrop);
+Quill.register('modules/imageDropper', ImageDropper);
 Quill.register('modules/imageResize', ImageResize);
 
 
@@ -28,7 +28,11 @@ export const options = {
       maxStack: 20,
       userOnly: false,
     },
-    imageDrop: true,
+    imageDropper: {
+      method: 'readAsDataURL',
+      dropCallback: (data: string) => Promise.resolve(data),
+      pasteCallback: (data: string) => Promise.resolve(data),
+    },
     imageResize: {
       displayStyles: {
         backgroundColor: 'black',

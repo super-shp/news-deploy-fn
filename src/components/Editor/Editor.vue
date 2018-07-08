@@ -35,7 +35,6 @@ export default Vue.extend({
     };
   },
   mounted() {
-    // @ts-ignore
     this.initializeEditor();
   },
 
