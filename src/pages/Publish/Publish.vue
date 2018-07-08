@@ -1,5 +1,6 @@
 <template>
   <div class="publish">
+    publish
     <Editor></Editor>
   </div>
 </template>

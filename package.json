@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@heydovetail/editor": "^4.3.1",
     "@types/axios": "^0.14.0",
     "@types/vue": "^2.0.0",
     "@types/vue-router": "^2.0.0",

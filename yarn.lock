@@ -642,6 +642,71 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
+"@heydovetail/editor@^4.3.1":
+  version "4.3.1"
+  resolved "http://npm.byted.org/@heydovetail%2feditor/-/editor-4.3.1.tgz#48844d8839b547a96611158fed895b61f15b6f85"
+  dependencies:
+    "@heydovetail/tslint-config" "^2.1.1"
+    "@heydovetail/ui-components" "^2.0.6"
+    "@types/prosemirror-collab" "1.0.2"
+    "@types/prosemirror-commands" "1.0.1"
+    "@types/prosemirror-history" "1.0.1"
+    "@types/prosemirror-keymap" "1.0.1"
+    "@types/prosemirror-model" "1.4.1"
+    "@types/prosemirror-state" "1.1.1"
+    "@types/prosemirror-transform" "1.0.3"
+    "@types/prosemirror-view" "1.2.1"
+    csx "^9.0.0"
+    prosemirror-collab "1.0.0"
+    prosemirror-commands "1.0.7"
+    prosemirror-history "1.0.2"
+    prosemirror-keymap "1.0.1"
+    prosemirror-model "1.5.0"
+    prosemirror-state "1.2.0"
+    prosemirror-transform "1.0.10"
+    prosemirror-view "1.3.0"
+    rxjs "^6.2.0"
+    tslib "^1.9.2"
+    typestyle "^2.0.1"
+    typestyle-react "^2.0.2"
+
+"@heydovetail/svg-to-react@^1.1.1":
+  version "1.1.1"
+  resolved "http://npm.byted.org/@heydovetail%2fsvg-to-react/-/svg-to-react-1.1.1.tgz#ac7f3d72d8b62d9554a7c5e17b722ba5743cf318"
+  dependencies:
+    ajv "^6.4.0"
+    chalk "^2.3.2"
+    glob "^7.1.2"
+    h2x-core "^0.1.9"
+    h2x-plugin-jsx "^0.1.9"
+    lodash.memoize "^4.1.2"
+    prettier "^1.11.1"
+    svgo "^1.0.5"
+    tslib "^1.9.0"
+    yargs "^11.0.0"
+
+"@heydovetail/tslint-config@^2.1.1":
+  version "2.1.1"
+  resolved "http://npm.byted.org/@heydovetail%2ftslint-config/-/tslint-config-2.1.1.tgz#5d246e41af89221829b05e85534ecf4fe5b22def"
+  dependencies:
+    tslint-microsoft-contrib "^5.0.2"
+
+"@heydovetail/ui-components@^2.0.6":
+  version "2.15.0"
+  resolved "http://npm.byted.org/@heydovetail%2fui-components/-/ui-components-2.15.0.tgz#3fb0e409f6c2c9502f8d11c322d32f9fd5a70d0e"
+  dependencies:
+    "@heydovetail/svg-to-react" "^1.1.1"
+    "@types/react-router-dom" "^4.2.6"
+    "@types/react-textarea-autosize" "^4.3.2"
+    color-shorthand-hex-to-six-digit "^2.1.0"
+    csx "^9.0.0"
+    react-router-dom "^4.2.2"
+    react-textarea-autosize "^6.1.0"
+    react-transition-group "^2.3.1"
+    tslib "^1.9.0"
+    typestyle "^2.0.1"
+    typestyle-react "^2.0.2"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "http://npm.byted.org/@mrmlnc%2freaddir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -663,6 +728,10 @@
   version "4.1.4"
   resolved "http://npm.byted.org/@types%2fchai/-/chai-4.1.4.tgz#5ca073b330d90b4066d6ce18f60d57f2084ce8ca"
 
+"@types/history@*":
+  version "4.6.2"
+  resolved "http://npm.byted.org/@types%2fhistory/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
+
 "@types/mocha@^2.2.46":
   version "2.2.48"
   resolved "http://npm.byted.org/@types%2fmocha/-/mocha-2.2.48.tgz#3523b126a0b049482e1c3c11877460f76622ffab"
@@ -674,6 +743,123 @@
 "@types/node@^9.3.0":
   version "9.6.22"
   resolved "http://npm.byted.org/@types%2fnode/-/node-9.6.22.tgz#05b55093faaadedea7a4b3f76e9a61346a6dd209"
+
+"@types/orderedmap@*":
+  version "1.0.0"
+  resolved "http://npm.byted.org/@types%2forderedmap/-/orderedmap-1.0.0.tgz#807455a192bba52cbbb4517044bc82bdbfa8c596"
+
+"@types/prosemirror-collab@1.0.2":
+  version "1.0.2"
+  resolved "http://npm.byted.org/@types%2fprosemirror-collab/-/prosemirror-collab-1.0.2.tgz#be5b8ae8821262174ad6fd0f4a53fb10acfc848a"
+  dependencies:
+    "@types/prosemirror-model" "*"
+    "@types/prosemirror-state" "*"
+    "@types/prosemirror-transform" "*"
+
+"@types/prosemirror-commands@1.0.1":
+  version "1.0.1"
+  resolved "http://npm.byted.org/@types%2fprosemirror-commands/-/prosemirror-commands-1.0.1.tgz#e23f75629d90eef8c25132257b1ea1c5f978db9e"
+  dependencies:
+    "@types/prosemirror-model" "*"
+    "@types/prosemirror-state" "*"
+    "@types/prosemirror-view" "*"
+
+"@types/prosemirror-history@1.0.1":
+  version "1.0.1"
+  resolved "http://npm.byted.org/@types%2fprosemirror-history/-/prosemirror-history-1.0.1.tgz#b8d7595f73788b63fc9f2b57a763ba8375abfe87"
+  dependencies:
+    "@types/prosemirror-model" "*"
+    "@types/prosemirror-state" "*"
+
+"@types/prosemirror-keymap@1.0.1":
+  version "1.0.1"
+  resolved "http://npm.byted.org/@types%2fprosemirror-keymap/-/prosemirror-keymap-1.0.1.tgz#5051bcf819ff017db3d82d032c8ac1ffc270b895"
+  dependencies:
+    "@types/prosemirror-state" "*"
+    "@types/prosemirror-view" "*"
+
+"@types/prosemirror-model@*":
+  version "1.5.0"
+  resolved "http://npm.byted.org/@types%2fprosemirror-model/-/prosemirror-model-1.5.0.tgz#a37548559ec32dc77b179ca8738df44ef261a3ef"
+  dependencies:
+    "@types/orderedmap" "*"
+
+"@types/prosemirror-model@1.4.1":
+  version "1.4.1"
+  resolved "http://npm.byted.org/@types%2fprosemirror-model/-/prosemirror-model-1.4.1.tgz#a9acdcb8e02c0f1431f448307b9e3257969556a9"
+  dependencies:
+    "@types/orderedmap" "*"
+
+"@types/prosemirror-state@*":
+  version "1.2.0"
+  resolved "http://npm.byted.org/@types%2fprosemirror-state/-/prosemirror-state-1.2.0.tgz#c758204e8de51c9d3e3d657619258442a809a679"
+  dependencies:
+    "@types/prosemirror-model" "*"
+    "@types/prosemirror-transform" "*"
+    "@types/prosemirror-view" "*"
+
+"@types/prosemirror-state@1.1.1":
+  version "1.1.1"
+  resolved "http://npm.byted.org/@types%2fprosemirror-state/-/prosemirror-state-1.1.1.tgz#e7b9296eea9aa0f832dbb7b5df1e27cdafb26d41"
+  dependencies:
+    "@types/prosemirror-model" "*"
+    "@types/prosemirror-transform" "*"
+    "@types/prosemirror-view" "*"
+
+"@types/prosemirror-transform@*":
+  version "1.1.0"
+  resolved "http://npm.byted.org/@types%2fprosemirror-transform/-/prosemirror-transform-1.1.0.tgz#6e042cbf45fdbea0c9d62201a60ac55b8c0661cf"
+  dependencies:
+    "@types/prosemirror-model" "*"
+
+"@types/prosemirror-transform@1.0.3":
+  version "1.0.3"
+  resolved "http://npm.byted.org/@types%2fprosemirror-transform/-/prosemirror-transform-1.0.3.tgz#735d1404a70262aa5a88a3d684e3149c5d8a6905"
+  dependencies:
+    "@types/prosemirror-model" "*"
+
+"@types/prosemirror-view@*":
+  version "1.3.0"
+  resolved "http://npm.byted.org/@types%2fprosemirror-view/-/prosemirror-view-1.3.0.tgz#b360b52db2c96b3dcf4b47fd9536d26501e2b1cb"
+  dependencies:
+    "@types/prosemirror-model" "*"
+    "@types/prosemirror-state" "*"
+    "@types/prosemirror-transform" "*"
+
+"@types/prosemirror-view@1.2.1":
+  version "1.2.1"
+  resolved "http://npm.byted.org/@types%2fprosemirror-view/-/prosemirror-view-1.2.1.tgz#b3c0fb37832968388b6f99dc17f46f7395ef357c"
+  dependencies:
+    "@types/prosemirror-model" "*"
+    "@types/prosemirror-state" "*"
+    "@types/prosemirror-transform" "*"
+
+"@types/react-router-dom@^4.2.6":
+  version "4.2.7"
+  resolved "http://npm.byted.org/@types%2freact-router-dom/-/react-router-dom-4.2.7.tgz#9d36bfe175f916dd8d7b6b0237feed6cce376b4c"
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+    "@types/react-router" "*"
+
+"@types/react-router@*":
+  version "4.0.28"
+  resolved "http://npm.byted.org/@types%2freact-router/-/react-router-4.0.28.tgz#b0445fc38613c81e92ca9ec0e08ab36697d51003"
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+
+"@types/react-textarea-autosize@^4.3.2":
+  version "4.3.2"
+  resolved "http://npm.byted.org/@types%2freact-textarea-autosize/-/react-textarea-autosize-4.3.2.tgz#0cc9e381d77a9f58984cead1b046200d6907419b"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*":
+  version "16.4.6"
+  resolved "http://npm.byted.org/@types%2freact/-/react-16.4.6.tgz#5024957c6bcef4f02823accf5974faba2e54fada"
+  dependencies:
+    csstype "^2.2.0"
 
 "@types/vue-router@^2.0.0":
   version "2.0.0"
@@ -977,7 +1163,7 @@
     text-table "^0.2.0"
     webpack-log "^1.1.2"
 
-abab@^1.0.4:
+abab@^1.0.3, abab@^1.0.4:
   version "1.0.4"
   resolved "http://npm.byted.org/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
 
@@ -998,11 +1184,21 @@ acorn-dynamic-import@^3.0.0:
   dependencies:
     acorn "^5.0.0"
 
+acorn-globals@^3.1.0:
+  version "3.1.0"
+  resolved "http://npm.byted.org/acorn-globals/-/acorn-globals-3.1.0.tgz#fd8270f71fbb4996b004fa880ee5d46573a731bf"
+  dependencies:
+    acorn "^4.0.4"
+
 acorn-globals@^4.1.0:
   version "4.1.0"
   resolved "http://npm.byted.org/acorn-globals/-/acorn-globals-4.1.0.tgz#ab716025dbe17c54d3ef81d32ece2b2d99fe2538"
   dependencies:
     acorn "^5.0.0"
+
+acorn@^4.0.4:
+  version "4.0.13"
+  resolved "http://npm.byted.org/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
 acorn@^5.0.0, acorn@^5.3.0, acorn@^5.5.3, acorn@^5.6.2:
   version "5.7.1"
@@ -1032,7 +1228,7 @@ ajv@^5.1.0:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
-ajv@^6.1.0:
+ajv@^6.1.0, ajv@^6.4.0:
   version "6.5.2"
   resolved "http://npm.byted.org/ajv/-/ajv-6.5.2.tgz#678495f9b82f7cca6be248dd92f59bff5e1f4360"
   dependencies:
@@ -1424,7 +1620,7 @@ bonjour@^3.5.0:
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
 
-boolbase@~1.0.0:
+boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "http://npm.byted.org/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
 
@@ -1853,6 +2049,12 @@ coa@~1.0.1:
   dependencies:
     q "^1.1.2"
 
+coa@~2.0.1:
+  version "2.0.1"
+  resolved "http://npm.byted.org/coa/-/coa-2.0.1.tgz#f3f8b0b15073e35d70263fb1042cb2c023db38af"
+  dependencies:
+    q "^1.1.2"
+
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "http://npm.byted.org/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
@@ -1877,6 +2079,15 @@ color-name@1.1.1:
 color-name@^1.0.0:
   version "1.1.3"
   resolved "http://npm.byted.org/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
+
+color-shorthand-hex-to-six-digit@^2.1.0:
+  version "2.3.0"
+  resolved "http://npm.byted.org/color-shorthand-hex-to-six-digit/-/color-shorthand-hex-to-six-digit-2.3.0.tgz#dd35a084b35ba777089547e8de64181139e35fe3"
+  dependencies:
+    hex-color-regex "*"
+    lodash.clonedeep "*"
+    lodash.isplainobject "*"
+    lodash.isstring "*"
 
 color-string@^0.3.0:
   version "0.3.0"
@@ -1988,6 +2199,10 @@ constants-browserify@^1.0.0:
 content-disposition@0.5.2:
   version "0.5.2"
   resolved "http://npm.byted.org/content-disposition/-/content-disposition-0.5.2.tgz#0cf68bb9ddf5f2be7961c3a85178cb85dba78cb4"
+
+content-type-parser@^1.0.1:
+  version "1.0.2"
+  resolved "http://npm.byted.org/content-type-parser/-/content-type-parser-1.0.2.tgz#caabe80623e63638b2502fd4c7f12ff4ce2352e7"
 
 content-type@~1.0.4:
   version "1.0.4"
@@ -2151,6 +2366,10 @@ css-loader@^0.28.11:
     postcss-value-parser "^3.3.0"
     source-list-map "^2.0.0"
 
+css-select-base-adapter@~0.1.0:
+  version "0.1.0"
+  resolved "http://npm.byted.org/css-select-base-adapter/-/css-select-base-adapter-0.1.0.tgz#0102b3d14630df86c3eb9fa9f5456270106cf990"
+
 css-select@^1.1.0:
   version "1.2.0"
   resolved "http://npm.byted.org/css-select/-/css-select-1.2.0.tgz#2b3a110539c5355f1cd8d314623e870b121ec858"
@@ -2160,6 +2379,15 @@ css-select@^1.1.0:
     domutils "1.5.1"
     nth-check "~1.0.1"
 
+css-select@~1.3.0-rc0:
+  version "1.3.0-rc0"
+  resolved "http://npm.byted.org/css-select/-/css-select-1.3.0-rc0.tgz#6f93196aaae737666ea1036a8cb14a8fcb7a9231"
+  dependencies:
+    boolbase "^1.0.0"
+    css-what "2.1"
+    domutils "1.5.1"
+    nth-check "^1.0.1"
+
 css-selector-tokenizer@^0.7.0:
   version "0.7.0"
   resolved "http://npm.byted.org/css-selector-tokenizer/-/css-selector-tokenizer-0.7.0.tgz#e6988474ae8c953477bf5e7efecfceccd9cf4c86"
@@ -2167,6 +2395,24 @@ css-selector-tokenizer@^0.7.0:
     cssesc "^0.1.0"
     fastparse "^1.1.1"
     regexpu-core "^1.0.0"
+
+css-tree@1.0.0-alpha.29:
+  version "1.0.0-alpha.29"
+  resolved "http://npm.byted.org/css-tree/-/css-tree-1.0.0-alpha.29.tgz#3fa9d4ef3142cbd1c301e7664c1f352bd82f5a39"
+  dependencies:
+    mdn-data "~1.1.0"
+    source-map "^0.5.3"
+
+css-tree@1.0.0-alpha25:
+  version "1.0.0-alpha25"
+  resolved "http://npm.byted.org/css-tree/-/css-tree-1.0.0-alpha25.tgz#1bbfabfbf6eeef4f01d9108ff2edd0be2fe35597"
+  dependencies:
+    mdn-data "^1.0.0"
+    source-map "^0.5.3"
+
+css-url-regex@^1.1.0:
+  version "1.1.0"
+  resolved "http://npm.byted.org/css-url-regex/-/css-url-regex-1.1.0.tgz#83834230cc9f74c457de59eebd1543feeb83b7ec"
 
 css-what@2.1:
   version "2.1.0"
@@ -2213,6 +2459,12 @@ cssnano@^3.10.0:
     postcss-value-parser "^3.2.3"
     postcss-zindex "^2.0.1"
 
+csso@^3.5.0:
+  version "3.5.1"
+  resolved "http://npm.byted.org/csso/-/csso-3.5.1.tgz#7b9eb8be61628973c1b261e169d2f024008e758b"
+  dependencies:
+    css-tree "1.0.0-alpha.29"
+
 csso@~2.3.1:
   version "2.3.2"
   resolved "http://npm.byted.org/csso/-/csso-2.3.2.tgz#ddd52c587033f49e94b71fc55569f252e8ff5f85"
@@ -2224,11 +2476,27 @@ cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   version "0.3.3"
   resolved "http://npm.byted.org/cssom/-/cssom-0.3.3.tgz#7b344769915759c2c9e3eb8c26f7fd533dbea252"
 
+"cssstyle@>= 0.2.37 < 0.3.0":
+  version "0.2.37"
+  resolved "http://npm.byted.org/cssstyle/-/cssstyle-0.2.37.tgz#541097234cb2513c83ceed3acddc27ff27987d54"
+  dependencies:
+    cssom "0.3.x"
+
 "cssstyle@>= 0.3.1 < 0.4.0":
   version "0.3.1"
   resolved "http://npm.byted.org/cssstyle/-/cssstyle-0.3.1.tgz#6da9b4cff1bc5d716e6e5fe8e04fcb1b50a49adf"
   dependencies:
     cssom "0.3.x"
+
+csstype@^2.2.0, csstype@^2.4.0, csstype@^2.5.1:
+  version "2.5.5"
+  resolved "http://npm.byted.org/csstype/-/csstype-2.5.5.tgz#4125484a3d42189a863943f23b9e4b80fedfa106"
+
+csx@^9.0.0:
+  version "9.0.0"
+  resolved "http://npm.byted.org/csx/-/csx-9.0.0.tgz#490ea99eac6834a8c90ecfc555e5e77e7eb00a03"
+  dependencies:
+    csstype "^2.5.1"
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -2267,6 +2535,10 @@ date-now@^0.1.4:
 de-indent@^1.0.2:
   version "1.0.2"
   resolved "http://npm.byted.org/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
+
+debounce-microtask@^1.0.0:
+  version "1.0.0"
+  resolved "http://npm.byted.org/debounce-microtask/-/debounce-microtask-1.0.0.tgz#3da58188f2ca3ce8f793550f45122a153756afd6"
 
 debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.8:
   version "2.6.9"
@@ -2434,6 +2706,10 @@ dom-converter@~0.1:
   dependencies:
     utila "~0.3"
 
+dom-helpers@^3.3.1:
+  version "3.3.1"
+  resolved "http://npm.byted.org/dom-helpers/-/dom-helpers-3.3.1.tgz#fc1a4e15ffdf60ddde03a480a9c0fece821dd4a6"
+
 dom-serializer@0:
   version "0.1.0"
   resolved "http://npm.byted.org/dom-serializer/-/dom-serializer-0.1.0.tgz#073c697546ce0780ce23be4a28e293e40bc30c82"
@@ -2575,7 +2851,7 @@ error-stack-parser@^2.0.0:
   dependencies:
     stackframe "^1.0.4"
 
-es-abstract@^1.4.3, es-abstract@^1.5.1, es-abstract@^1.7.0:
+es-abstract@^1.4.3, es-abstract@^1.5.1, es-abstract@^1.6.1, es-abstract@^1.7.0:
   version "1.12.0"
   resolved "http://npm.byted.org/es-abstract/-/es-abstract-1.12.0.tgz#9dbbdd27c6856f0001421ca18782d786bf8a6165"
   dependencies:
@@ -2624,7 +2900,7 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "http://npm.byted.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-escodegen@^1.9.0:
+escodegen@^1.6.1, escodegen@^1.9.0:
   version "1.10.0"
   resolved "http://npm.byted.org/escodegen/-/escodegen-1.10.0.tgz#f647395de22519fbd0d928ffcf1d17e0dec2603e"
   dependencies:
@@ -3039,6 +3315,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
+free-style@2.5.1:
+  version "2.5.1"
+  resolved "http://npm.byted.org/free-style/-/free-style-2.5.1.tgz#5e3f684c470d3bba7e4dbb43524e0a08917e873c"
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "http://npm.byted.org/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -3101,7 +3381,7 @@ fstream@^1.0.0, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-function-bind@^1.0.2, function-bind@^1.1.1:
+function-bind@^1.0.2, function-bind@^1.1.0, function-bind@^1.1.1:
   version "1.1.1"
   resolved "http://npm.byted.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
 
@@ -3271,6 +3551,42 @@ gzip-size@^4.1.0:
     duplexer "^0.1.1"
     pify "^3.0.0"
 
+h2x-core@^0.1.9:
+  version "0.1.9"
+  resolved "http://npm.byted.org/h2x-core/-/h2x-core-0.1.9.tgz#9ffd02b438f6c14505ae4d834db9ad1dcb596368"
+  dependencies:
+    h2x-generate "^0.1.9"
+    h2x-parse "^0.1.0"
+    h2x-traverse "^0.1.9"
+
+h2x-generate@^0.1.9:
+  version "0.1.9"
+  resolved "http://npm.byted.org/h2x-generate/-/h2x-generate-0.1.9.tgz#8f94edfe1845a3805aa7d3069355c0668974aa90"
+  dependencies:
+    h2x-traverse "^0.1.9"
+
+h2x-parse@^0.1.0:
+  version "0.1.0"
+  resolved "http://npm.byted.org/h2x-parse/-/h2x-parse-0.1.0.tgz#d0508b936f3feaef9251270c2d8d3f6a5c7f84b1"
+  dependencies:
+    jsdom "11.1.0"
+
+h2x-plugin-jsx@^0.1.9:
+  version "0.1.9"
+  resolved "http://npm.byted.org/h2x-plugin-jsx/-/h2x-plugin-jsx-0.1.9.tgz#2ef41f4da1e2c92680fac3425fcce63696107f11"
+  dependencies:
+    h2x-types "^0.1.0"
+
+h2x-traverse@^0.1.9:
+  version "0.1.9"
+  resolved "http://npm.byted.org/h2x-traverse/-/h2x-traverse-0.1.9.tgz#2f75b232b1cdd0d4b6dce6dcc06dad8a22dae64f"
+  dependencies:
+    h2x-types "^0.1.0"
+
+h2x-types@^0.1.0:
+  version "0.1.0"
+  resolved "http://npm.byted.org/h2x-types/-/h2x-types-0.1.0.tgz#0528342cd63631ec147f98ffa7a25279b5bd0f1f"
+
 handle-thing@^1.2.5:
   version "1.2.5"
   resolved "http://npm.byted.org/handle-thing/-/handle-thing-1.2.5.tgz#fd7aad726bf1a5fd16dfc29b2f7a6601d27139c4"
@@ -3392,6 +3708,20 @@ he@1.1.1, he@1.1.x, he@^1.1.0:
   version "1.1.1"
   resolved "http://npm.byted.org/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
+hex-color-regex@*:
+  version "1.1.0"
+  resolved "http://npm.byted.org/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
+
+history@^4.7.2:
+  version "4.7.2"
+  resolved "http://npm.byted.org/history/-/history-4.7.2.tgz#22b5c7f31633c5b8021c7f4a8a954ac139ee8d5b"
+  dependencies:
+    invariant "^2.2.1"
+    loose-envify "^1.2.0"
+    resolve-pathname "^2.2.0"
+    value-equal "^0.4.0"
+    warning "^3.0.0"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "http://npm.byted.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -3407,6 +3737,10 @@ hoek@2.x.x:
 hoek@4.x.x:
   version "4.2.1"
   resolved "http://npm.byted.org/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
+
+hoist-non-react-statics@^2.5.0:
+  version "2.5.5"
+  resolved "http://npm.byted.org/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
 hosted-git-info@^2.1.4:
   version "2.6.1"
@@ -3425,7 +3759,7 @@ html-comment-regex@^1.1.0:
   version "1.1.1"
   resolved "http://npm.byted.org/html-comment-regex/-/html-comment-regex-1.1.1.tgz#668b93776eaae55ebde8f3ad464b307a4963625e"
 
-html-encoding-sniffer@^1.0.2:
+html-encoding-sniffer@^1.0.1, html-encoding-sniffer@^1.0.2:
   version "1.0.2"
   resolved "http://npm.byted.org/html-encoding-sniffer/-/html-encoding-sniffer-1.0.2.tgz#e70d84b94da53aa375e11fe3a351be6642ca46f8"
   dependencies:
@@ -3627,7 +3961,7 @@ interpret@^1.0.1:
   version "1.1.0"
   resolved "http://npm.byted.org/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
-invariant@^2.2.0, invariant@^2.2.2:
+invariant@^2.2.0, invariant@^2.2.1, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "http://npm.byted.org/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   dependencies:
@@ -3966,6 +4300,13 @@ js-yaml@^3.4.3, js-yaml@^3.7.0:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+js-yaml@~3.10.0:
+  version "3.10.0"
+  resolved "http://npm.byted.org/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
+
 js-yaml@~3.7.0:
   version "3.7.0"
   resolved "http://npm.byted.org/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
@@ -3980,6 +4321,32 @@ jsbn@~0.1.0:
 jsdom-global@^3.0.2:
   version "3.0.2"
   resolved "http://npm.byted.org/jsdom-global/-/jsdom-global-3.0.2.tgz#6bd299c13b0c4626b2da2c0393cd4385d606acb9"
+
+jsdom@11.1.0:
+  version "11.1.0"
+  resolved "http://npm.byted.org/jsdom/-/jsdom-11.1.0.tgz#6c48d7a48ffc5c300283c312904d15da8360509b"
+  dependencies:
+    abab "^1.0.3"
+    acorn "^4.0.4"
+    acorn-globals "^3.1.0"
+    array-equal "^1.0.0"
+    content-type-parser "^1.0.1"
+    cssom ">= 0.3.2 < 0.4.0"
+    cssstyle ">= 0.2.37 < 0.3.0"
+    escodegen "^1.6.1"
+    html-encoding-sniffer "^1.0.1"
+    nwmatcher "^1.4.1"
+    parse5 "^3.0.2"
+    pn "^1.0.0"
+    request "^2.79.0"
+    request-promise-native "^1.0.3"
+    sax "^1.2.1"
+    symbol-tree "^3.2.1"
+    tough-cookie "^2.3.2"
+    webidl-conversions "^4.0.0"
+    whatwg-encoding "^1.0.1"
+    whatwg-url "^6.1.0"
+    xml-name-validator "^2.0.1"
 
 jsdom@^11.10.0:
   version "11.11.0"
@@ -4197,7 +4564,7 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "http://npm.byted.org/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 
-lodash.clonedeep@^4.3.2:
+lodash.clonedeep@*, lodash.clonedeep@^4.3.2:
   version "4.5.0"
   resolved "http://npm.byted.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
 
@@ -4217,7 +4584,11 @@ lodash.isfunction@^3.0.8:
   version "3.0.9"
   resolved "http://npm.byted.org/lodash.isfunction/-/lodash.isfunction-3.0.9.tgz#06de25df4db327ac931981d1bdb067e5af68d051"
 
-lodash.isstring@^4.0.1:
+lodash.isplainobject@*:
+  version "4.0.6"
+  resolved "http://npm.byted.org/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+
+lodash.isstring@*, lodash.isstring@^4.0.1:
   version "4.0.1"
   resolved "http://npm.byted.org/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
 
@@ -4278,7 +4649,7 @@ long@^3.2.0:
   version "3.2.0"
   resolved "http://npm.byted.org/long/-/long-3.2.0.tgz#d821b7138ca1cb581c172990ef14db200b5c474b"
 
-loose-envify@^1.0.0:
+loose-envify@^1.0.0, loose-envify@^1.2.0, loose-envify@^1.3.1:
   version "1.3.1"
   resolved "http://npm.byted.org/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
@@ -4340,6 +4711,10 @@ md5.js@^1.3.4:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+mdn-data@^1.0.0, mdn-data@~1.1.0:
+  version "1.1.4"
+  resolved "http://npm.byted.org/mdn-data/-/mdn-data-1.1.4.tgz#50b5d4ffc4575276573c4eedb8780812a8419f01"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -4823,7 +5198,7 @@ npm-run-path@^2.0.0:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
-nth-check@~1.0.1:
+nth-check@^1.0.1, nth-check@~1.0.1:
   version "1.0.1"
   resolved "http://npm.byted.org/nth-check/-/nth-check-1.0.1.tgz#9929acdf628fc2c41098deab82ac580cf149aae4"
   dependencies:
@@ -4836,6 +5211,10 @@ num2fraction@^1.2.2:
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "http://npm.byted.org/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
+
+nwmatcher@^1.4.1:
+  version "1.4.4"
+  resolved "http://npm.byted.org/nwmatcher/-/nwmatcher-1.4.4.tgz#2285631f34a95f0d0395cd900c96ed39b58f346e"
 
 nwsapi@^2.0.0:
   version "2.0.4"
@@ -4895,6 +5274,15 @@ object.pick@^1.3.0:
   resolved "http://npm.byted.org/object.pick/-/object.pick-1.3.0.tgz#87a10ac4c1694bd2e1cbf53591a66141fb5dd747"
   dependencies:
     isobject "^3.0.1"
+
+object.values@^1.0.4:
+  version "1.0.4"
+  resolved "http://npm.byted.org/object.values/-/object.values-1.0.4.tgz#e524da09b4f66ff05df457546ec72ac99f13069a"
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.6.1"
+    function-bind "^1.1.0"
+    has "^1.0.1"
 
 obuf@^1.0.0, obuf@^1.1.1:
   version "1.1.2"
@@ -4969,6 +5357,10 @@ ora@^2.1.0:
     log-symbols "^2.2.0"
     strip-ansi "^4.0.0"
     wcwidth "^1.0.1"
+
+orderedmap@^1.0.0:
+  version "1.0.0"
+  resolved "http://npm.byted.org/orderedmap/-/orderedmap-1.0.0.tgz#d90fc2ba1ed085190907d601dec6e6a53f8d41ba"
 
 original@>=0.0.5:
   version "1.0.1"
@@ -5087,7 +5479,7 @@ parse5@4.0.0:
   version "4.0.0"
   resolved "http://npm.byted.org/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
 
-parse5@^3.0.3:
+parse5@^3.0.2, parse5@^3.0.3:
   version "3.0.3"
   resolved "http://npm.byted.org/parse5/-/parse5-3.0.3.tgz#042f792ffdd36851551cf4e9e066b3874ab45b5c"
   dependencies:
@@ -5138,6 +5530,12 @@ path-parse@^1.0.5:
 path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "http://npm.byted.org/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
+
+path-to-regexp@^1.7.0:
+  version "1.7.0"
+  resolved "http://npm.byted.org/path-to-regexp/-/path-to-regexp-1.7.0.tgz#59fde0f435badacba103a84e9d3bc64e96b9937d"
+  dependencies:
+    isarray "0.0.1"
 
 path-type@^1.0.0:
   version "1.1.0"
@@ -5199,7 +5597,7 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-pn@^1.1.0:
+pn@^1.0.0, pn@^1.1.0:
   version "1.1.0"
   resolved "http://npm.byted.org/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
@@ -5512,7 +5910,7 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "http://npm.byted.org/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.13.0:
+prettier@^1.11.1, prettier@^1.13.0:
   version "1.13.7"
   resolved "http://npm.byted.org/prettier/-/prettier-1.13.7.tgz#850f3b8af784a49a6ea2d2eaa7ed1428a34b7281"
 
@@ -5542,6 +5940,82 @@ progress@^2.0.0:
 promise-inflight@^1.0.1:
   version "1.0.1"
   resolved "http://npm.byted.org/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
+
+prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
+  version "15.6.2"
+  resolved "http://npm.byted.org/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
+  dependencies:
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
+prosemirror-collab@1.0.0:
+  version "1.0.0"
+  resolved "http://npm.byted.org/prosemirror-collab/-/prosemirror-collab-1.0.0.tgz#46665658816918d572328974786503dd777cd37d"
+  dependencies:
+    prosemirror-state "^1.0.0"
+
+prosemirror-commands@1.0.7:
+  version "1.0.7"
+  resolved "http://npm.byted.org/prosemirror-commands/-/prosemirror-commands-1.0.7.tgz#e5a2ba821e29ea7065c88277fe2c3d7f6b0b9d37"
+  dependencies:
+    prosemirror-model "^1.0.0"
+    prosemirror-state "^1.0.0"
+    prosemirror-transform "^1.0.0"
+
+prosemirror-history@1.0.2:
+  version "1.0.2"
+  resolved "http://npm.byted.org/prosemirror-history/-/prosemirror-history-1.0.2.tgz#25f0e6acb07f14d3d2a3985a8df84e3ff429acd1"
+  dependencies:
+    prosemirror-state "^1.0.0"
+    prosemirror-transform "^1.0.0"
+    rope-sequence "^1.2.0"
+
+prosemirror-keymap@1.0.1:
+  version "1.0.1"
+  resolved "http://npm.byted.org/prosemirror-keymap/-/prosemirror-keymap-1.0.1.tgz#03ef32b828e3a859dfb570eb84928bf2e5330bc2"
+  dependencies:
+    prosemirror-state "^1.0.0"
+    w3c-keyname "^1.1.8"
+
+prosemirror-model@1.5.0, prosemirror-model@^1.0.0, prosemirror-model@^1.1.0:
+  version "1.5.0"
+  resolved "http://npm.byted.org/prosemirror-model/-/prosemirror-model-1.5.0.tgz#4fa5498ed08eaabafec3e88ea2dcba149d5d458a"
+  dependencies:
+    orderedmap "^1.0.0"
+
+prosemirror-state@1.2.0:
+  version "1.2.0"
+  resolved "http://npm.byted.org/prosemirror-state/-/prosemirror-state-1.2.0.tgz#c41723462b35318ef7f29caf23be41dd1ec513d3"
+  dependencies:
+    prosemirror-model "^1.0.0"
+    prosemirror-transform "^1.0.0"
+
+prosemirror-state@^1.0.0:
+  version "1.2.1"
+  resolved "http://npm.byted.org/prosemirror-state/-/prosemirror-state-1.2.1.tgz#71971e2b992a2f2bf3aa9f805499031cccf12226"
+  dependencies:
+    prosemirror-model "^1.0.0"
+    prosemirror-transform "^1.0.0"
+
+prosemirror-transform@1.0.10:
+  version "1.0.10"
+  resolved "http://npm.byted.org/prosemirror-transform/-/prosemirror-transform-1.0.10.tgz#0e4af6b9babb8d985f0a145f10b859815fc5033c"
+  dependencies:
+    prosemirror-model "^1.0.0"
+
+prosemirror-transform@^1.0.0:
+  version "1.1.3"
+  resolved "http://npm.byted.org/prosemirror-transform/-/prosemirror-transform-1.1.3.tgz#28cfdf1f9ee514edc40466be7b7db39eed545fdf"
+  dependencies:
+    prosemirror-model "^1.0.0"
+
+prosemirror-view@1.3.0:
+  version "1.3.0"
+  resolved "http://npm.byted.org/prosemirror-view/-/prosemirror-view-1.3.0.tgz#5589e9815a11eaa4797d9cbd0ed4e8f9bcd19736"
+  dependencies:
+    prosemirror-model "^1.1.0"
+    prosemirror-state "^1.0.0"
+    prosemirror-transform "^1.0.0"
 
 proxy-addr@~2.0.3:
   version "2.0.3"
@@ -5680,6 +6154,48 @@ rc@^1.2.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+react-lifecycles-compat@^3.0.4:
+  version "3.0.4"
+  resolved "http://npm.byted.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+
+react-router-dom@^4.2.2:
+  version "4.3.1"
+  resolved "http://npm.byted.org/react-router-dom/-/react-router-dom-4.3.1.tgz#4c2619fc24c4fa87c9fd18f4fb4a43fe63fbd5c6"
+  dependencies:
+    history "^4.7.2"
+    invariant "^2.2.4"
+    loose-envify "^1.3.1"
+    prop-types "^15.6.1"
+    react-router "^4.3.1"
+    warning "^4.0.1"
+
+react-router@^4.3.1:
+  version "4.3.1"
+  resolved "http://npm.byted.org/react-router/-/react-router-4.3.1.tgz#aada4aef14c809cb2e686b05cee4742234506c4e"
+  dependencies:
+    history "^4.7.2"
+    hoist-non-react-statics "^2.5.0"
+    invariant "^2.2.4"
+    loose-envify "^1.3.1"
+    path-to-regexp "^1.7.0"
+    prop-types "^15.6.1"
+    warning "^4.0.1"
+
+react-textarea-autosize@^6.1.0:
+  version "6.1.0"
+  resolved "http://npm.byted.org/react-textarea-autosize/-/react-textarea-autosize-6.1.0.tgz#df91387f8a8f22020b77e3833c09829d706a09a5"
+  dependencies:
+    prop-types "^15.6.0"
+
+react-transition-group@^2.3.1:
+  version "2.4.0"
+  resolved "http://npm.byted.org/react-transition-group/-/react-transition-group-2.4.0.tgz#1d9391fabfd82e016f26fabd1eec329dbd922b5a"
+  dependencies:
+    dom-helpers "^3.3.1"
+    loose-envify "^1.3.1"
+    prop-types "^15.6.2"
+    react-lifecycles-compat "^3.0.4"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -5869,7 +6385,7 @@ request-promise-core@1.1.1:
   dependencies:
     lodash "^4.13.1"
 
-request-promise-native@^1.0.5:
+request-promise-native@^1.0.3, request-promise-native@^1.0.5:
   version "1.0.5"
   resolved "http://npm.byted.org/request-promise-native/-/request-promise-native-1.0.5.tgz#5281770f68e0c9719e5163fd3fab482215f4fda5"
   dependencies:
@@ -5904,7 +6420,7 @@ request-promise-native@^1.0.5:
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
 
-request@^2.83.0:
+request@^2.79.0, request@^2.83.0:
   version "2.87.0"
   resolved "http://npm.byted.org/request/-/request-2.87.0.tgz#32f00235cd08d482b4d0d68db93a829c0ed5756e"
   dependencies:
@@ -5980,6 +6496,10 @@ resolve-from@^3.0.0:
   version "3.0.0"
   resolved "http://npm.byted.org/resolve-from/-/resolve-from-3.0.0.tgz#b22c7af7d9d6881bc8b6e653335eebcb0a188748"
 
+resolve-pathname@^2.2.0:
+  version "2.2.0"
+  resolved "http://npm.byted.org/resolve-pathname/-/resolve-pathname-2.2.0.tgz#7e9ae21ed815fd63ab189adeee64dc831eefa879"
+
 resolve-url@^0.2.1:
   version "0.2.1"
   resolved "http://npm.byted.org/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
@@ -6014,11 +6534,21 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rope-sequence@^1.2.0:
+  version "1.2.2"
+  resolved "http://npm.byted.org/rope-sequence/-/rope-sequence-1.2.2.tgz#49c4e5c2f54a48e990b050926771e2871bcb31ce"
+
 run-queue@^1.0.0, run-queue@^1.0.3:
   version "1.0.3"
   resolved "http://npm.byted.org/run-queue/-/run-queue-1.0.3.tgz#e848396f057d223f24386924618e25694161ec47"
   dependencies:
     aproba "^1.1.1"
+
+rxjs@^6.2.0:
+  version "6.2.1"
+  resolved "http://npm.byted.org/rxjs/-/rxjs-6.2.1.tgz#246cebec189a6cbc143a3ef9f62d6f4c91813ca1"
+  dependencies:
+    tslib "^1.9.0"
 
 safe-buffer@5.1.1:
   version "5.1.1"
@@ -6057,7 +6587,7 @@ sass-loader@^7.0.1:
     neo-async "^2.5.0"
     pify "^3.0.0"
 
-sax@^1.2.4, sax@~1.2.1:
+sax@^1.2.1, sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
   version "1.2.4"
   resolved "http://npm.byted.org/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
@@ -6392,6 +6922,10 @@ ssri@^5.2.4:
   dependencies:
     safe-buffer "^5.1.1"
 
+stable@~0.1.6:
+  version "0.1.8"
+  resolved "http://npm.byted.org/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
+
 stackframe@^1.0.4:
   version "1.0.4"
   resolved "http://npm.byted.org/stackframe/-/stackframe-1.0.4.tgz#357b24a992f9427cba6b545d96a14ed2cbca187b"
@@ -6566,7 +7100,26 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-symbol-tree@^3.2.2:
+svgo@^1.0.5:
+  version "1.0.5"
+  resolved "http://npm.byted.org/svgo/-/svgo-1.0.5.tgz#7040364c062a0538abacff4401cea6a26a7a389a"
+  dependencies:
+    coa "~2.0.1"
+    colors "~1.1.2"
+    css-select "~1.3.0-rc0"
+    css-select-base-adapter "~0.1.0"
+    css-tree "1.0.0-alpha25"
+    css-url-regex "^1.1.0"
+    csso "^3.5.0"
+    js-yaml "~3.10.0"
+    mkdirp "~0.5.1"
+    object.values "^1.0.4"
+    sax "~1.2.4"
+    stable "~0.1.6"
+    unquote "~1.1.1"
+    util.promisify "~1.0.0"
+
+symbol-tree@^3.2.1, symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "http://npm.byted.org/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
 
@@ -6663,7 +7216,7 @@ toposort@^1.0.0:
   version "1.0.7"
   resolved "http://npm.byted.org/toposort/-/toposort-1.0.7.tgz#2e68442d9f64ec720b8cc89e6443ac6caa950029"
 
-tough-cookie@>=2.3.3, tough-cookie@^2.3.3:
+tough-cookie@>=2.3.3, tough-cookie@^2.3.2, tough-cookie@^2.3.3:
   version "2.4.3"
   resolved "http://npm.byted.org/tough-cookie/-/tough-cookie-2.4.3.tgz#53f36da3f47783b0925afa06ff9f3b165280f781"
   dependencies:
@@ -6710,9 +7263,15 @@ ts-loader@^4.3.1:
     micromatch "^3.1.4"
     semver "^5.0.1"
 
-tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.2:
   version "1.9.3"
   resolved "http://npm.byted.org/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
+
+tslint-microsoft-contrib@^5.0.2:
+  version "5.0.3"
+  resolved "http://npm.byted.org/tslint-microsoft-contrib/-/tslint-microsoft-contrib-5.0.3.tgz#6fc3e238179cd72045c2b422e4d655f4183a8d5c"
+  dependencies:
+    tsutils "^2.12.1"
 
 tslint@^5.10.0:
   version "5.10.0"
@@ -6779,6 +7338,21 @@ typedarray@^0.0.6:
 typescript@~2.9.0:
   version "2.9.2"
   resolved "http://npm.byted.org/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
+
+typestyle-react@^2.0.2:
+  version "2.0.3"
+  resolved "http://npm.byted.org/typestyle-react/-/typestyle-react-2.0.3.tgz#229487a47b47042798c58cca4f4f24eaeb955345"
+  dependencies:
+    debounce-microtask "^1.0.0"
+    tslib "^1.9.0"
+    typestyle "^2.0.1"
+
+typestyle@^2.0.1:
+  version "2.0.1"
+  resolved "http://npm.byted.org/typestyle/-/typestyle-2.0.1.tgz#9593e6029ce5f23f1a5728ddd3ed6bf1ffa781f8"
+  dependencies:
+    csstype "^2.4.0"
+    free-style "2.5.1"
 
 uglify-es@^3.3.4:
   version "3.3.10"
@@ -6863,6 +7437,10 @@ unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "http://npm.byted.org/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
 
+unquote@~1.1.1:
+  version "1.1.1"
+  resolved "http://npm.byted.org/unquote/-/unquote-1.1.1.tgz#8fded7324ec6e88a0ff8b905e7c098cdc086d544"
+
 unset-value@^1.0.0:
   version "1.0.0"
   resolved "http://npm.byted.org/unset-value/-/unset-value-1.0.0.tgz#8376873f7d2335179ffb1e6fc3a8ed0dfc8ab559"
@@ -6924,7 +7502,7 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "http://npm.byted.org/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
-util.promisify@1.0.0, util.promisify@^1.0.0:
+util.promisify@1.0.0, util.promisify@^1.0.0, util.promisify@~1.0.0:
   version "1.0.0"
   resolved "http://npm.byted.org/util.promisify/-/util.promisify-1.0.0.tgz#440f7165a459c9a16dc145eb8e72f35687097030"
   dependencies:
@@ -6965,6 +7543,10 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+value-equal@^0.4.0:
+  version "0.4.0"
+  resolved "http://npm.byted.org/value-equal/-/value-equal-0.4.0.tgz#c5bdd2f54ee093c04839d71ce2e4758a6890abc7"
 
 vary@~1.1.2:
   version "1.1.2"
@@ -7045,15 +7627,27 @@ vue@*, vue@^2.5.16:
   version "2.5.16"
   resolved "http://npm.byted.org/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
 
-vuex@^3.0.1:
-  version "3.0.1"
-  resolved "http://npm.byted.org/vuex/-/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
-
 w3c-hr-time@^1.0.1:
   version "1.0.1"
   resolved "http://npm.byted.org/w3c-hr-time/-/w3c-hr-time-1.0.1.tgz#82ac2bff63d950ea9e3189a58a65625fedf19045"
   dependencies:
     browser-process-hrtime "^0.1.2"
+
+w3c-keyname@^1.1.8:
+  version "1.1.8"
+  resolved "http://npm.byted.org/w3c-keyname/-/w3c-keyname-1.1.8.tgz#4e2219663760fd6535b7a1550f1552d71fc9372c"
+
+warning@^3.0.0:
+  version "3.0.0"
+  resolved "http://npm.byted.org/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+  dependencies:
+    loose-envify "^1.0.0"
+
+warning@^4.0.1:
+  version "4.0.1"
+  resolved "http://npm.byted.org/warning/-/warning-4.0.1.tgz#66ce376b7fbfe8a887c22bdf0e7349d73d397745"
+  dependencies:
+    loose-envify "^1.0.0"
 
 watchpack@^1.5.0:
   version "1.6.0"
@@ -7075,7 +7669,7 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-webidl-conversions@^4.0.2:
+webidl-conversions@^4.0.0, webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "http://npm.byted.org/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
 
@@ -7221,7 +7815,7 @@ whatwg-mimetype@^2.0.0, whatwg-mimetype@^2.1.0:
   version "2.1.0"
   resolved "http://npm.byted.org/whatwg-mimetype/-/whatwg-mimetype-2.1.0.tgz#f0f21d76cbba72362eb609dbed2a30cd17fcc7d4"
 
-whatwg-url@^6.4.0, whatwg-url@^6.4.1:
+whatwg-url@^6.1.0, whatwg-url@^6.4.0, whatwg-url@^6.4.1:
   version "6.5.0"
   resolved "http://npm.byted.org/whatwg-url/-/whatwg-url-6.5.0.tgz#f2df02bff176fd65070df74ad5ccbb5a199965a8"
   dependencies:
@@ -7280,6 +7874,10 @@ ws@^4.0.0:
   dependencies:
     async-limiter "~1.0.0"
     safe-buffer "~5.1.0"
+
+xml-name-validator@^2.0.1:
+  version "2.0.2"
+  resolved "http://npm.byted.org/xml-name-validator/-/xml-name-validator-2.0.2.tgz#e5c392d5f2c29dde896fceac1378803d06122211"
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
