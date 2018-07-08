@@ -1,6 +1,6 @@
 // fork from https://github.com/kensnyder/quill-image-drop-module/blob/master/index.js
 
-import { Quill } from 'quill';
+import { default as Quill } from 'quill';
 
 export interface ImageDropModuleOption {
   method: 'readAsArrayBuffer' | 'readAsDataURL' | 'readAsText';
