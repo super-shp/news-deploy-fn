@@ -16,6 +16,7 @@ export class Image extends Embed {
     const node = super.create(value);
     if (typeof value === 'string') {
       node.setAttribute('src', PLACE_HOLDER.UPLOADING);
+      // node.setAttribute('src', value);
     }
     return node;
   }
