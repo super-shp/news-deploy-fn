@@ -3385,10 +3385,6 @@ he@1.1.1, he@1.1.x, he@^1.1.0:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/he/download/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
-highlight.js@^9.12.0:
-  version "9.12.0"
-  resolved "http://registry.npm.taobao.org/highlight.js/download/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
-
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/hmac-drbg/download/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -5034,10 +5030,6 @@ parchment@^1.1.2, parchment@^1.1.4:
   version "1.1.4"
   resolved "http://registry.npm.taobao.org/parchment/download/parchment-1.1.4.tgz#aeded7ab938fe921d4c34bc339ce1168bc2ffde5"
 
-parchment@quilljs/parchment#487850f7eb030a6c4e750ba809e58b09444e0bdb:
-  version "2.0.0-dev"
-  resolved "https://codeload.github.com/quilljs/parchment/tar.gz/487850f7eb030a6c4e750ba809e58b09444e0bdb"
-
 parse-asn1@^5.0.0:
   version "5.1.1"
   resolved "http://registry.npm.taobao.org/parse-asn1/download/parse-asn1-5.1.1.tgz#f6bf293818332bd0dab54efb16087724745e6ca8"
@@ -5655,12 +5647,6 @@ quill-delta@^3.6.2:
     deep-equal "^1.0.1"
     extend "^3.0.1"
     fast-diff "1.1.2"
-
-quill-image-drop-module@^1.0.3:
-  version "1.0.3"
-  resolved "http://registry.npm.taobao.org/quill-image-drop-module/download/quill-image-drop-module-1.0.3.tgz#0e5ec8329dd67a12126f166b191bf64d2057a7d3"
-  dependencies:
-    quill "^1.2.2"
 
 quill-image-resize-module@^3.0.0:
   version "3.0.0"
