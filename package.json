@@ -23,6 +23,7 @@
     "quill-image-resize-module": "^3.0.0",
     "vue": "^2.5.16",
     "vue-class-component": "^6.2.0",
+    "vue-holderjs": "^1.0.2",
     "vue-property-decorator": "^6.0.0",
     "vue-router": "^3.0.1"
   },
