@@ -4,6 +4,10 @@ const Embed = Quill.import('blots/embed');
 
 const ATTRIBUTES = ['alt', 'height', 'width'];
 
+const PLACE_HOLDER = {
+  UPLOADING: 'http://placehold.it/300x200/dddddd.jpg/ffffff?text=Picture+uploading',
+};
+
 export class Image extends Embed {
   public static blotName = 'image';
   public static tagName = 'IMG';
@@ -11,7 +15,7 @@ export class Image extends Embed {
   public static create(value: any) {
     const node = super.create(value);
     if (typeof value === 'string') {
-      node.setAttribute('src', this.sanitize(value));
+      node.setAttribute('src', PLACE_HOLDER.UPLOADING);
     }
     return node;
   }
