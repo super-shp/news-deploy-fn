@@ -1,9 +1,16 @@
 import { default as Quill } from 'quill';
+import { Image } from './blots';
 import { ImageDropper } from './module';
 import ImageResize from 'quill-image-resize-module';
 
-Quill.register('modules/imageDropper', ImageDropper);
-Quill.register('modules/imageResize', ImageResize);
+Quill.register({
+  'modules/imageDropper': ImageDropper,
+  'modules/imageResize': ImageResize,
+
+  'formats/image': Image,
+});
+
+
 
 
 export const options = {

@@ -1,13 +1,14 @@
-import { EmbedBlot } from 'parchment';
-import { sanitize } from '../formats/link';
+import { default as Quill } from 'quill';
+
+const Embed = Quill.import('blots/embed');
 
 const ATTRIBUTES = ['alt', 'height', 'width'];
 
-class Image extends EmbedBlot {
+export class Image extends Embed {
   public static blotName = 'image';
   public static tagName = 'IMG';
 
-  public static create(value) {
+  public static create(value: any) {
     const node = super.create(value);
     if (typeof value === 'string') {
       node.setAttribute('src', this.sanitize(value));
@@ -15,16 +16,17 @@ class Image extends EmbedBlot {
     return node;
   }
 
-  public static formats(domNode) {
+  public static formats(domNode: Element) {
     return ATTRIBUTES.reduce((formats, attribute) => {
       if (domNode.hasAttribute(attribute)) {
+        // @ts-ignore
         formats[attribute] = domNode.getAttribute(attribute);
       }
       return formats;
     }, {});
   }
 
-  public static match(url) {
+  public static match(url: string): boolean {
     return /\.(jpe?g|gif|png)$/.test(url) || /^data:image\/.+;base64/.test(url);
   }
 
@@ -41,17 +43,21 @@ class Image extends EmbedBlot {
     return sanitize(url, ['http', 'https', 'data']) ? url : '//:0';
   }
 
-  public static value(domNode): string {
+  public static value(domNode: Element): string | null {
     return domNode.getAttribute('src');
   }
 
-  public domNode?: Element;
+  constructor(node: any, data: any) {
+    super(node);
+  }
 
-  format(name: string, value: string) {
+  public format(name: string, value: string) {
     if (ATTRIBUTES.indexOf(name) > -1) {
       if (value) {
+        // @ts-ignore
         this.domNode.setAttribute(name, value);
       } else {
+        // @ts-ignore
         this.domNode.removeAttribute(name);
       }
     } else {
@@ -62,7 +68,7 @@ class Image extends EmbedBlot {
 Image.blotName = 'image';
 Image.tagName = 'IMG';
 
-function sanitize(url: string, protocols: string): boolean {
+function sanitize(url: string, protocols: string[]): boolean {
   const anchor = document.createElement('a');
   anchor.href = url;
   const protocol = anchor.href.slice(0, anchor.href.indexOf(':'));

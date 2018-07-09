@@ -80,7 +80,6 @@ export default Vue.extend({
   },
   watch: {
     content(val, oldVal) {
-      debugger;
       if ((this as any).editor) {
         if (val && val !== this.delta) {
           if (typeof val === 'string') {
