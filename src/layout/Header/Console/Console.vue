@@ -14,7 +14,7 @@
       </a>
 
       <div v-if="!getLoginStatus">
-        <DropdownItem>登陆</DropdownItem>
+        <DropdownItem @click="login">登陆</DropdownItem>
         <DropdownItem>注册</DropdownItem>
       </div>
       <div v-else>
@@ -29,12 +29,20 @@
 import Vue from 'vue';
 import { default as Search } from './Search.vue';
 
+import { login } from './actions';
+
 export default Vue.extend({
   components: {
     Search,
   },
   props: {
     username: String,
+  },
+  methods: {
+    async login() {
+      const data = await login();
+      console.log(data);
+    },
   },
   computed: {
     getLoginStatus(): boolean {

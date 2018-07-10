@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { default as Console } from './Console.vue';
+import { Console } from './Console';
 
 export default Vue.extend({
   components: {
