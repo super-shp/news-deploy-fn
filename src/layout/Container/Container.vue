@@ -15,6 +15,7 @@ export default {};
 <style lang="scss" scoped>
 .container-wrapper {
   height: 1000px;
+  background-color: #fafbfc;
 
   .content {
     margin: 45px 10px 0;

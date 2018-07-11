@@ -84,5 +84,9 @@ export default Vue.extend({
       color: #fff;
     }
   }
+
+  .icon {
+    color: #fff;
+  }
 }
 </style>

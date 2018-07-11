@@ -21,7 +21,7 @@ export default Vue.extend({
   mounted() {
     const imageWrapper = this.$refs.imageWrapper as HTMLElement;
     const image = document.createElement('img');
-    Object.keys(this.imgStyle).forEach((key: string) => {
+    Object.keys(this.imgStyle || {}).forEach((key: string) => {
       const value = this.imgStyle[key];
       // @ts-ignore
       image.style[key] = value;

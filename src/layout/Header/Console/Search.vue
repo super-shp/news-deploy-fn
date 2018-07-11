@@ -86,6 +86,10 @@ export default Vue.extend({
       }
     }
   }
+
+  .icon {
+    color: #fff;
+  }
 }
 
 .expand {

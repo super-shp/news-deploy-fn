@@ -6,7 +6,6 @@ module.exports = {
   },
   configureWebpack: () => ({
     module: {
-
     },
     plugins: [
       new webpack.ProvidePlugin({
