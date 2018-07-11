@@ -14,8 +14,14 @@ export default {};
 
 <style lang="scss" scoped>
 .container-wrapper {
-  height: 1000px;
   background-color: #fafbfc;
+
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+  }
 
   .content {
     margin: 45px 10px 0;
