@@ -2,17 +2,45 @@ import { default as Quill, Delta } from 'quill';
 
 const DeltaKlass = Quill.import('delta');
 
-const div: Element = document.createElement('div');
-document.body.appendChild(div);
+let convertor: Quill | null = null;
 
-(div as HTMLElement).style.display = 'none';
+const wrapper = document.querySelector('.convertor-wrapper');
+const div: Element = wrapper ? wrapper : ((): HTMLElement => {
+  const convertorWrapper: Element = document.createElement('div');
+  document.body.appendChild(convertorWrapper);
+  (convertorWrapper as HTMLElement).style.display = 'none';
+  convertorWrapper.classList.add('convertor-wrapper');
+  return convertorWrapper as HTMLElement;
+})();
 
-const converter: Quill = new Quill(div, {});
 
 export const convert = (value: string | Delta): Delta => {
-  typeof value === 'string' ? converter.pasteHTML(value) : converter.setContents(value);
-  const delta: Delta = converter.getContents();
-  converter.setContents(new DeltaKlass());
+  if (convertor) {
+    typeof value === 'string' ? convertor.pasteHTML(value) : convertor.setContents(value);
+    const delta: Delta = convertor.getContents();
+    convertor.setContents(new DeltaKlass());
 
-  return delta;
+    return delta;
+  } else {
+    return new DeltaKlass();
+  }
+};
+
+export const getConvertor = (): Quill | null => convertor;
+
+export const createConvertor = (): Quill => {
+  if (!convertor) {
+    convertor = new Quill(div, {});
+  }
+  return convertor;
+};
+
+export const destroyConvertor = () => {
+  /**
+   * #138
+   * 1.remove domNode from its parents & remenber clear classlist
+   * 2. Remove the editor from the Quill.editors array.
+   * 3. Clear the editor update tick: clearInterval(quill.editor.timer)
+   * 4. remove converter pointer
+   */
 };
