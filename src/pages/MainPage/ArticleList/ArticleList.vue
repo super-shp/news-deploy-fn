@@ -1,6 +1,9 @@
 <template>
   <div class="article-list">
-    <NewCard></NewCard>
+    <NewCard />
+    <NewCard />
+    <NewCard />
+    <NewCard />
   </div>
 </template>
 

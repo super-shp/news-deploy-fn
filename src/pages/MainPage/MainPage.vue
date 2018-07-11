@@ -25,5 +25,13 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.main-page {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+  }
+}
 </style>
 

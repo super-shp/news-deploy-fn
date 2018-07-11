@@ -19,6 +19,13 @@ export default {};
 
   .content {
     margin: 45px 10px 0;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+      visibility: hidden;
+    }
   }
 }
 </style>
