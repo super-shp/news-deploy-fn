@@ -9,7 +9,7 @@
         <Dropdown class="more">
           <template slot="trigger">
             <a class="trigger-wrapper">
-              <Icon icon="dots-horizontal"  />
+              <Icon icon="dots-horizontal" size="is-medium"  />
             </a>
           </template>
 
