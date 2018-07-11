@@ -37,7 +37,7 @@ export const createConvertor = (): Quill => {
 
 export const destroyConvertor = () => {
   /**
-   * #138
+   * &#138
    * 1.remove domNode from its parents & remenber clear classlist
    * 2. Remove the editor from the Quill.editors array.
    * 3. Clear the editor update tick: clearInterval(quill.editor.timer)
