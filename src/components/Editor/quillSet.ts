@@ -3,7 +3,6 @@ import { Image } from './blots';
 import { ImageDropper } from './module';
 import ImageResize from 'quill-image-resize-module';
 
-
 Quill.register({
   'modules/imageDropper': ImageDropper,
   'modules/imageResize': ImageResize,
@@ -14,7 +13,7 @@ Quill.register({
 export const options = {
   theme: 'snow',
   boundary: document.body,
-  placeholder: 'Insert text here ...',
+  placeholder: '请输入文字...',
   readOnly: false,
   formats: [
     'bold',

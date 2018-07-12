@@ -101,12 +101,29 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-.ql-toolbar {
-  border: 0 !important;
-}
+.quill-editor {
+  position: relative;
 
-.ql-container {
-  border: 0 !important;
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .ql-toolbar {
+    &.ql-snow {
+      border: 0;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .ql-container {
+    &.ql-snow {
+      border: 0;
+      height: 500px;
+    }
+  }
 }
 </style>
 

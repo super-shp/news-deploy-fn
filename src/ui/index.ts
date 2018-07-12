@@ -3,15 +3,11 @@ import { default as Buefy } from 'buefy';
 import { default as VueHolder } from 'vue-holderjs';
 import { Button } from './button';
 import { Image } from './image';
+import { Input } from './input';
 import 'buefy/lib/buefy.css';
 import './style.scss';
 
-const {
-  Icon,
-  Dropdown,
-  DropdownItem,
-  Input,
-} = Buefy as any;
+const { Icon, Dropdown, DropdownItem } = Buefy as any;
 
 export const initUI = (Vue: VueConstructor) => {
   Vue.use(VueHolder);
