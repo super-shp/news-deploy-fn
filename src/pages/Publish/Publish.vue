@@ -74,6 +74,7 @@ export default Vue.extend({
     &.ql-snow {
       background-color: #eee;
       border: 0;
+      margin-bottom: 10px;
     }
   }
 }
