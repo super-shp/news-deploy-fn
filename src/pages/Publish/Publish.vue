@@ -2,7 +2,7 @@
   <div class="publish">
     <Container>
       <template slot="header">
-        <h4>发布新闻</h4>
+        <h3>发布新闻</h3>
       </template>
       <template slot="content">
         <Input placeholder="请输入标题..." v-model="title"/>
@@ -51,13 +51,14 @@ export default Vue.extend({
       box-shadow: none;
       border-radius: 0;
       border: 0;
+      border-bottom: 0;
       padding-left: 15px;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 24px;
+      text-align: center;
 
       &::placeholder {
         color: rgba(0, 0, 0, 0.6);
-        font-style: italic;
       }
 
       &:active,

@@ -26,10 +26,11 @@ export default Vue.extend({});
   .publish-header {
     padding-top: 20px;
     padding-left: 45px;
+    border-bottom: 1px solid #bdbdbd;
   }
 
   .publish-content {
-    padding: 10px 50px;
+    padding: 40px 50px;
   }
 }
 </style>
