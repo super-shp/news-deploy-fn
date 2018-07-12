@@ -21,6 +21,7 @@ export default Vue.extend({});
   margin: 30px auto;
   padding: 20px;
   background-color: #fff;
+  border: 1px solid #dbe2e8;
 
   .publish-header {
     padding-top: 20px;

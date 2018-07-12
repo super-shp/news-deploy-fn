@@ -15,6 +15,7 @@ export default {};
 <style lang="scss" scoped>
 .container-wrapper {
   background-color: #fafbfc;
+  box-shadow: 0 1px 4px;
 
   &::after {
     content: '';
