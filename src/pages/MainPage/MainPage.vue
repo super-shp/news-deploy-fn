@@ -5,6 +5,9 @@
     <template slot="main">
       <ArticleList />
     </template>
+    <template slot="side">
+      <ColumnList />
+    </template>
   </MainLayout>
 </div>
 </template>
@@ -14,12 +17,14 @@ import Vue from 'vue';
 import { TopBanner } from './TopBanner';
 import { MainLayout } from './MainLayout';
 import { ArticleList } from './ArticleList';
+import { ColumnList } from './ColumnList';
 
 export default Vue.extend({
   components: {
     TopBanner,
     MainLayout,
     ArticleList,
+    ColumnList,
   },
 });
 </script>
