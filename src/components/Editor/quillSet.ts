@@ -10,14 +10,23 @@ Quill.register({
   'formats/image': Image,
 });
 
-
-
-
 export const options = {
   theme: 'snow',
   boundary: document.body,
   placeholder: 'Insert text here ...',
   readOnly: false,
+  formats: [
+    'bold',
+    'italic',
+    'link',
+    'clean',
+    'header',
+    'strike',
+    'list',
+    'underline',
+    'image',
+    'code-block',
+  ],
   modules: {
     toolbar: [
       [{ header: 1 }, { header: 2 }],
@@ -50,5 +59,3 @@ export const options = {
     },
   },
 };
-
-

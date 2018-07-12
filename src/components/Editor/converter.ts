@@ -5,18 +5,21 @@ const DeltaKlass = Quill.import('delta');
 let convertor: Quill | null = null;
 
 const wrapper = document.querySelector('.convertor-wrapper');
-const div: Element = wrapper ? wrapper : ((): HTMLElement => {
-  const convertorWrapper: Element = document.createElement('div');
-  document.body.appendChild(convertorWrapper);
-  (convertorWrapper as HTMLElement).style.display = 'none';
-  convertorWrapper.classList.add('convertor-wrapper');
-  return convertorWrapper as HTMLElement;
-})();
-
+const div: Element = wrapper
+  ? wrapper
+  : ((): HTMLElement => {
+      const convertorWrapper: Element = document.createElement('div');
+      document.body.appendChild(convertorWrapper);
+      (convertorWrapper as HTMLElement).style.display = 'none';
+      convertorWrapper.classList.add('convertor-wrapper');
+      return convertorWrapper as HTMLElement;
+    })();
 
 export const convert = (value: string | Delta): Delta => {
   if (convertor) {
-    typeof value === 'string' ? convertor.pasteHTML(value) : convertor.setContents(value);
+    typeof value === 'string'
+      ? convertor.pasteHTML(value)
+      : convertor.setContents(value);
     const delta: Delta = convertor.getContents();
     convertor.setContents(new DeltaKlass());
 

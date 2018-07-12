@@ -41,7 +41,6 @@ export default Vue.extend({
   methods: {
     async login() {
       const data = await login();
-      console.log(data);
     },
   },
   computed: {
