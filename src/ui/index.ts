@@ -4,6 +4,7 @@ import { default as VueHolder } from 'vue-holderjs';
 import { Button } from './button';
 import { Image } from './image';
 import { Input } from './input';
+import { Modal } from './modal';
 import 'buefy/lib/buefy.css';
 import './style.scss';
 
@@ -18,4 +19,5 @@ export const initUI = (Vue: VueConstructor) => {
   Vue.component('DropdownItem', DropdownItem);
   Vue.component('Input', Input);
   Vue.component('iImage', Image);
+  Vue.component('Modal', Modal);
 };

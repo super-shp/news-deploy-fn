@@ -1,9 +1,10 @@
 <template>
-	<a class="button" :class="classes" :disabled="disabled"><slot /></a>
+	<a class="button" :class="classes" @click="handleClick" :disabled="disabled"><slot /></a>
 </template>
 
 <script lang="ts">
 import { default as Vue } from 'vue';
+import { EventEmitter } from 'events';
 
 const TYPE: {
   [index: string]: string;
@@ -36,6 +37,11 @@ export default Vue.extend<
     status: String,
     loading: Boolean,
     disabled: Boolean,
+  },
+  methods: {
+    handleClick(e: Event) {
+      this.$emit('click', e);
+    },
   },
   computed: {
     classes(): any {

@@ -9,6 +9,7 @@
         <Editor
           v-model="content"
         />
+        <Cropper :isModalActive="isModalActive" />
       </template>
     </Container>
   </div>
@@ -18,16 +19,22 @@
 import Vue from 'vue';
 import { Container } from './Container';
 import { Editor, convert } from '@/components/Editor';
+import { Cropper } from '@/components/Cropper';
 
 export default Vue.extend({
   components: {
     Container,
     Editor,
+    Cropper,
+  },
+  mounted() {
+    this.isModalActive = true;
   },
   data() {
     return {
       title: '',
       content: convert('你好'),
+      isModalActive: false,
     };
   },
 });
