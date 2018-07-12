@@ -3,6 +3,7 @@ import { Image } from './blots';
 import { ImageDropper } from './module';
 import ImageResize from 'quill-image-resize-module';
 
+
 Quill.register({
   'modules/imageDropper': ImageDropper,
   'modules/imageResize': ImageResize,
@@ -57,5 +58,6 @@ export const options = {
       },
       modules: ['Resize', 'DisplaySize', 'Toolbar'],
     },
+    syntax: true,
   },
 };
