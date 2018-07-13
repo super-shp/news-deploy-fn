@@ -6998,6 +6998,10 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
 
+vue-img-inputer@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/vue-img-inputer/download/vue-img-inputer-2.0.0.tgz#34bb1e4f3019a61aadfb3382d81581ba1c660644"
+
 vue-loader@^15.2.0:
   version "15.2.4"
   resolved "http://registry.npm.taobao.org/vue-loader/download/vue-loader-15.2.4.tgz#a7b923123d3cf87230a8ff54a1c16d31a6c5dbb4"

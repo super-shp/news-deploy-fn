@@ -15,7 +15,7 @@
         </div>
         <footer class="card-footer">
           <Button @click="setCover" class="cropper-btn" status="primary">确认</Button>
-          <Button class="cropper-btn" status="text">取消</Button>
+          <Button class="cropper-btn" status="text" @click="closeModal">取消</Button>
         </footer>
       </div>
     </template>
@@ -27,18 +27,19 @@
 import Vue from 'vue';
 import { default as VueCropper } from 'vue-cropper';
 import { isBlob, isString, isFile } from '@/util';
-import { uploadImg } from './actions';
+import { uploadImg } from '@/api';
 
 export default Vue.extend({
   data() {
     return {
       isModalActive: false,
       loading: false,
-      img: '' as (string | Blob | File),
+      filename: '',
+      img: '',
     };
   },
   computed: {
-    imageSource(): string | Blob | File {
+    imageSource(): string | Blob {
       const img = this.img;
 
       return img ? img : '';
@@ -48,29 +49,55 @@ export default Vue.extend({
     VueCropper,
   },
   methods: {
-    editCover(img: string | Blob | File) {
-      if (isString(img) || isBlob(img) || isFile(img)) {
-        this.img = img;
+    cancel() {
+      this.$emit('cancel');
+      this.closeModal();
+    },
+
+    closeModal() {
+        this.filename = '';
+        this.img = '';
+        this.loading = false;
+        this.isModalActive = false;
+    },
+
+    editCover(img: string, fileName?: string) {
+      if (isString(img)) {
+        this.img = formatLink(img);
+        this.filename = fileName || '';
         this.isModalActive = true;
       }
     },
+
     async setCover() {
-      (this.$refs.cropper as any).getCropBlob(async (data: Blob) => {
+      const cropper = this.$refs.cropper as any;
+      cropper.getCropBlob(async (data: Blob) => {
         const { type } =  data;
         const trailling = type.split('/')[1];
 
         // const imageFile: File = blobToFile(data, `${new Date().getTime()}${trailling}`);
-        const imageFile: File = new File([data], `${new Date().getTime()}${trailling}`);
+        const imageFile: File = new File([data], `${this.filename}${new Date().getTime()}` 
+        || `${new Date().getTime()}${trailling}`);
 
         const src = await uploadImg(imageFile);
+        cropper.stopCrop();
 
-        this.isModalActive = false;
-console.log(src);
-        this.$emit('getCover', src);
+        this.closeModal();
+
+        // @ts-ignore
+        this.$emit('getCover', formatLink(src));
       });
     },
   },
 });
+
+function formatLink(link: string ) {
+  const reg = /^\/\//;
+  if (!reg.test(link)) {
+    link = `//${link}`;
+  }
+  return link;
+}
 </script>
 
 <style lang="scss" scoped>

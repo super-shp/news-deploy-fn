@@ -21,6 +21,7 @@
     "vue-class-component": "^6.2.0",
     "vue-cropper": "^0.2.9",
     "vue-holderjs": "^1.0.2",
+    "vue-img-inputer": "^2.0.0",
     "vue-property-decorator": "^6.0.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

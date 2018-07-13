@@ -9,7 +9,12 @@
         <Editor
           v-model="content"
         />
-        <Cropper ref="cropper" @getCover="setCover" />
+        <hr>
+        <CoverSetter />
+        <div class="options">
+          <Button status="primary">提交</Button>
+          <Button status="primary">取消</Button>
+        </div>
       </template>
     </Container>
   </div>
@@ -19,13 +24,13 @@
 import Vue from 'vue';
 import { Container } from './Container';
 import { Editor, convert } from '@/components/Editor';
-import { Cropper } from '@/components/Cropper';
+import { CoverSetter } from './CoverSetter';
 
 export default Vue.extend({
   components: {
     Container,
     Editor,
-    Cropper,
+    CoverSetter,
   },
   data() {
     return {
@@ -34,11 +39,7 @@ export default Vue.extend({
       cover: '',
     };
   },
-  methods: {
-    setCover(cover: string) {
-      this.cover = cover;
-    },
-  },
+  methods: {},
 });
 </script>
 
