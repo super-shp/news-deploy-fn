@@ -15,7 +15,7 @@ const axiosInstance: AxiosInstance = axios.create({
 axiosInstance.interceptors.response.use(
   ({ data }) => {
     const resData = data.data || null;
-    // handle errorCode
+    // handle errorCode under this line
     return resData;
   },
   error => {

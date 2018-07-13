@@ -9,7 +9,7 @@
         <Editor
           v-model="content"
         />
-        <Cropper :isModalActive="isModalActive" />
+        <Cropper ref="cropper" @getCover="setCover" />
       </template>
     </Container>
   </div>
@@ -27,15 +27,17 @@ export default Vue.extend({
     Editor,
     Cropper,
   },
-  mounted() {
-    this.isModalActive = true;
-  },
   data() {
     return {
       title: '',
       content: convert('你好'),
-      isModalActive: false,
+      cover: '',
     };
+  },
+  methods: {
+    setCover(cover: string) {
+      this.cover = cover;
+    },
   },
 });
 </script>
