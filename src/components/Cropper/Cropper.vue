@@ -6,7 +6,7 @@
         <div class="cropper-content">
           <VueCropper 
             ref="cropper"
-            :img="img"
+            :img="imageSource"
             :autoCrop="true"
             :autoCropWidth="600"
             :autoCropHeight="197"
@@ -26,30 +26,37 @@
 /// <reference path="./vue-cropper.d.ts">
 import Vue from 'vue';
 import { default as VueCropper } from 'vue-cropper';
+import { blobToFile } from '@/util';
+import { uploadImg } from './actions';
 
 export default Vue.extend({
+  props: ['img'],
+  data() {
+    return {
+      isModalActive: true,
+      loading: false,
+    };
+  },
+  computed: {
+    imageSource(): string | Blob | File {
+      const img = this.img;
+
+      return 'https://cdn.sspai.com/article/f0dae5b3-eb33-d74c-d8cf-4d0da22d5db6.jpg?imageMogr2/quality/95/thumbnail/!x372r/gravity/Center/crop/x372';
+    },
+  },
   components: {
     VueCropper,
   },
-  data() {
-    return {
-      img: 'https://cdn.sspai.com/article/83a4cbe0-55b4-7ea9-985d-31beca6d4902.jpg?imageMogr2/quality/95/thumbnail/!x750r/gravity/Center/crop/x750',
-    };
-  },
-  mounted() {
-    console.log(this);
-  },
   methods: {
-    setCover() {
-      (this.$refs.cropper as any).getCropBlob((data: Blob) => {
-        console.log(data);
+    async setCover() {
+      (this.$refs.cropper as any).getCropBlob(async (data: Blob) => {
+        const { type } =  data;
+        const trailling = type.split('/')[1];
+
+        const imageFile: File = blobToFile(data, `${new Date().getTime()}${trailling}`);
+
+        const src = await uploadImg(imageFile);
       });
-    },
-  },
-  props: {
-    isModalActive: {
-      default: false,
-      type: Boolean,
     },
   },
 });
