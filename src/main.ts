@@ -1,5 +1,5 @@
 import { default as Vue } from 'vue';
-import { initUI } from './ui';
+import { initUI } from './components';
 import { default as App } from './App.vue';
 import { router } from './router';
 import { mountConfig } from './vueConfig';
