@@ -12,7 +12,7 @@
       <Input />
     </Field>
     <div class="option">
-      <Button status="primary">注册</Button>
+      <Button status="danger">注册</Button>
     </div>
   </section>
 </div>
@@ -33,9 +33,18 @@ export default Vue.extend({});
 
   .option {
     padding: 20px 0;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+      visibility: hidden;
+    }
+
     .button {
       height: 40px;
       width: 150px;
+      float: right;
     }
   }
 }
