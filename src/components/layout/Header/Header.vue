@@ -3,7 +3,7 @@
     <div class="header-fixed">
       <header>
         <div class="inner">
-          <a class="logo"></a>
+          <router-link to="/" class="logo"></router-link>
           <div class="console-position">
             <Console />
           </div>
