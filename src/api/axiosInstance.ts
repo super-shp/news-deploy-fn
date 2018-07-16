@@ -1,9 +1,8 @@
 import { default as axios, AxiosInstance } from 'axios';
-
-const baseURL = 'http://localhost:8080/';
+import { BASE_URL } from '@/config';
 
 const axiosInstance: AxiosInstance = axios.create({
-  baseURL,
+  baseURL: BASE_URL,
   timeout: 10000,
   transformRequest: [
     (data, headers) => {

@@ -1,3 +1,3 @@
-export { api } from './axiosInstance';
-export * from './url';
-export * from './actions';
+export { api } from '@/api/axiosInstance';
+export * from '@/api/url';
+export * from '@/api/actions';

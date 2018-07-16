@@ -1,10 +1,10 @@
 import { VueConstructor } from 'vue';
 import { default as Buefy } from 'buefy';
 import { default as VueHolder } from 'vue-holderjs';
-import { Button } from './button';
-import { Image } from './image';
-import { Input } from './input';
-import { Modal } from './modal';
+import { Button } from '@/components/ui/button';
+import { Image } from '@/components/ui/image';
+import { Input } from '@/components/ui/input';
+import { Modal } from '@/components/ui/modal';
 import 'buefy/lib/buefy.css';
 import './style.scss';
 

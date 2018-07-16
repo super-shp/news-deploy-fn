@@ -1,1 +1,1 @@
-export { ImageDropper } from './ImageDropper';
+export { ImageDropper } from '@/components/Editor/module/ImageDropper';

@@ -5,4 +5,4 @@ import 'quill/dist/quill.snow.css';
 import './style.scss';
 
 export { default as Editor } from './Editor.vue';
-export { convert } from './converter';
+export { convert } from '@/components/Editor/converter';

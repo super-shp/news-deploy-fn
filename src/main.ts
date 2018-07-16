@@ -1,8 +1,8 @@
 import { default as Vue } from 'vue';
-import { initUI } from './components';
+import { initUI } from '@/components';
 import { default as App } from './App.vue';
-import { router } from './router';
-import { mountConfig } from './vueConfig';
+import { router } from '@/router';
+import { mountConfig } from '@/config/vueConfig';
 
 // set config by env
 mountConfig(Vue);

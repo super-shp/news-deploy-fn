@@ -1,5 +1,5 @@
-export * from './layout';
-export * from './ui';
+export * from '@/components/layout';
+export * from '@/components/ui';
 
-export * from './Cropper';
-export * from './Editor';
+export * from '@/components/Cropper';
+export * from '@/components/Editor';
