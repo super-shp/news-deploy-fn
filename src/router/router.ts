@@ -1,7 +1,5 @@
 import { RouteConfig } from 'vue-router';
-import { Login } from '@/pages/Auth';
-
-console.log(Login);
+import { Login, Register } from '@/pages/Auth';
 
 export const router: RouteConfig[] = [
   {
@@ -13,9 +11,14 @@ export const router: RouteConfig[] = [
       ),
   },
   {
-    path: '/auth',
+    path: '/login',
     name: 'login',
     component: Login,
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register,
   },
   {
     path: '/publish',
