@@ -5,7 +5,7 @@ import { router as routerConfig } from './router';
 
 Vue.use(Router);
 
-const route = new Router({
+const route: Router = new Router({
   routes: routerConfig,
 });
 
