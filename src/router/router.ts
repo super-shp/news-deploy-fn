@@ -1,4 +1,4 @@
-import { RouterOptions, RouteConfig } from 'vue-router';
+import { RouteConfig } from 'vue-router';
 import { Login } from '@/pages/Auth';
 
 console.log(Login);
@@ -20,6 +20,9 @@ export const router: RouteConfig[] = [
   {
     path: '/publish',
     name: 'publish',
+    meta: {
+      auth: true,
+    },
     component: () =>
       import('@/pages/Publish').then(({ Publish }) => Promise.resolve(Publish)),
   },
