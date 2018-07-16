@@ -14,6 +14,7 @@ export default {};
 
 <style lang="scss" scoped>
 .container-wrapper {
+  position: relative;
   background-color: #fafbfc;
   box-shadow: 0 1px 4px;
 
@@ -25,7 +26,9 @@ export default {};
   }
 
   .content {
-    margin: 45px 10px 0;
+    padding: 101px 10px 120px;
+    min-height: 100vh;
+    margin-bottom: 0;
 
     &::after {
       content: '';

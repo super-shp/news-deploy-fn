@@ -8,7 +8,7 @@ import { Modal } from './modal';
 import 'buefy/lib/buefy.css';
 import './style.scss';
 
-const { Icon, Dropdown, DropdownItem, Select } = Buefy as any;
+const { Icon, Dropdown, DropdownItem, Select, Field } = Buefy as any;
 
 export const initUI = (Vue: VueConstructor) => {
   Vue.use(VueHolder);
@@ -21,4 +21,5 @@ export const initUI = (Vue: VueConstructor) => {
   Vue.component('iImage', Image);
   Vue.component('Modal', Modal);
   Vue.component('Select', Select);
+  Vue.component('Field', Field);
 };

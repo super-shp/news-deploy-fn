@@ -31,7 +31,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .main-page {
-  padding-bottom: 30px;
+  padding: 45px 0 45px;
 
   &::after {
     content: '';

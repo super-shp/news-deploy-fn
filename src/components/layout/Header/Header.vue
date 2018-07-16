@@ -67,8 +67,6 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .header {
-  height: 101px;
-
   .header-fixed {
     position: fixed;
     width: 100%;
