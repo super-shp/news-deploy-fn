@@ -1,0 +1,111 @@
+.new-card {
+  display: block;
+  border: 1px solid #dbe2e8;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(46, 61, 73, 0.08);
+  padding: 20px;
+  margin: 0 0 20px;
+  transition: border 0.3s ease-in-out;
+
+  .card-header {
+    position: relative;
+    display: block;
+    margin: 0 0 20px;
+    box-shadow: none;
+
+    .avatar {
+      margin-right: 10px;
+      display: inline-block;
+      float: left;
+      vertical-align: middle;
+    }
+
+    h4 {
+      padding-top: 5px;
+      display: block;
+      margin-right: 0;
+      font-weight: 400;
+      margin: 0 10px 0 0;
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    .retweet {
+      color: #9b9b9b;
+      vertical-align: middle;
+      font-size: 12px;
+
+      .icon {
+        color: #9b9b9b;
+      }
+    }
+
+    .more {
+      position: absolute;
+      right: -5px;
+      top: 5px;
+
+      .dropdown-menu {
+        min-width: 7em;
+
+        .dropdown-content {
+          border-radius: 0;
+        }
+      }
+
+      .trigger-wrapper {
+        padding: 10px;
+      }
+
+      .icon {
+        color: #9b9b9b;
+      }
+    }
+  }
+
+  .banner {
+    margin-bottom: 23px;
+
+    &:hover {
+      transition: all 0.3 ease-in;
+      opacity: 0.8;
+    }
+  }
+
+  section > h3 > a {
+    color: #000;
+
+    &:hover {
+      color: #d7191a;
+    }
+  }
+
+  .meta {
+    margin-top: 22px;
+    color: #9b9b9b;
+
+    &::after {
+      content: '';
+      clear: both;
+      display: block;
+      visibility: hidden;
+    }
+
+    .actions {
+      float: right;
+
+      span {
+        margin-right: 5px;
+      }
+
+      & > span {
+        margin-right: 10px;
+
+        sup {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

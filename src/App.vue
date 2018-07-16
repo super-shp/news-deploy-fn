@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import { Header, Container, Footer } from './layout';
+import { Header, Container, Footer } from './components';
 
 @Component({
   components: {
