@@ -22,7 +22,7 @@
         <iImage :imgStyle="{height: '240px', width:'718px'}" placeholder="718x240" src="https://cdn.sspai.com/article/816cd264-4b3e-81e9-d487-bdc42955b688.jpg?imageMogr2/quality/95/thumbnail/!1440x480r/gravity/Center/crop/1440x480"></iImage>
       </a>
     </div>
-    <section>
+    <section class="card-info">
         <h3>
             <a>
             本期「福利派」包含了少数派定制周边，Power+ 定制 T 恤，效率新手包和付费栏目，若饭 V3.1、iSlide 特约优惠，活动在下周一结束。

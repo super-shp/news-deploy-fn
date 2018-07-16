@@ -75,6 +75,10 @@
 
   section > h3 > a {
     color: #000;
+
+    &:hover {
+      color: #d7191a;
+    }
   }
 
   .meta {
