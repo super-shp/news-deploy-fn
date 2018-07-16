@@ -76,7 +76,7 @@ export default Vue.extend({
         const trailling = type.split('/')[1];
 
         // const imageFile: File = blobToFile(data, `${new Date().getTime()}${trailling}`);
-        const imageFile: File = new File([data], `${this.filename}${new Date().getTime()}` 
+        const imageFile: File = new File([data], `${this.filename}${new Date().getTime()}`
         || `${new Date().getTime()}${trailling}`);
 
         const src = await uploadImg(imageFile);

@@ -51,8 +51,18 @@ export default Vue.extend({
     clear: both;
     visibility: hidden;
   }
+
+  .options {
+    button {
+      margin: 0 20px;
+    }
+  }
 }
 </style>
+
+<style lang="scss" scoped>
+</style>
+
 
 <style lang="scss">
 .publish {

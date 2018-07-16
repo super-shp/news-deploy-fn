@@ -1,7 +1,7 @@
 <template>
   <div class="top-banner">
     <div class="first">
-      <iImage :maxHeight="350"></iImage>
+      <iImage :maxHeight="503.5"></iImage>
     </div>
     <div class="row">
       <div class="row2">
@@ -43,6 +43,10 @@ export default Vue.extend({
 
     .row2 {
       display: flex;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

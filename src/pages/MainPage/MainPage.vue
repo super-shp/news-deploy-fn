@@ -31,6 +31,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .main-page {
+  padding-bottom: 30px;
+
   &::after {
     content: '';
     display: block;

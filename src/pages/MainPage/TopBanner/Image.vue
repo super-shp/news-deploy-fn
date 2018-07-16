@@ -1,6 +1,6 @@
 <template>
     <a class="banner-image" href="https://sspai.com/a/K859">
-      <iImage placeholder="651x346" :imgStyle="{ maxHeight: `${maxHeight}px`}" src="https://cdn.sspai.com/article/f0dae5b3-eb33-d74c-d8cf-4d0da22d5db6.jpg?imageMogr2/quality/95/thumbnail/!x372r/gravity/Center/crop/x372" alt="" />
+      <iImage placeholder="651x346" :imgStyle="{ maxHeight: `${maxHeight}px`}" src="https://cdn.sspai.com/article/f563a98e-3aaf-0edb-c95c-8e417aee967d.jpg?imageMogr2/quality/95/thumbnail/!x750r/gravity/Center/crop/x750" alt="" />
     </a>
 </template>
 
@@ -10,7 +10,7 @@ export default Vue.extend({
   props: {
     maxHeight: {
       type: Number,
-      default: 170,
+      default: 243,
     },
   },
 });
