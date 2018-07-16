@@ -10,10 +10,18 @@
           v-model="content"
         />
         <hr>
-        <CoverSetter />
-        <div class="options">
-          <Button status="primary">提交</Button>
-          <Button status="primary">取消</Button>
+        <div class="option">
+          <h4>设置专栏</h4>
+          <Select placeholder="选择专栏">
+            <option value="test">测试</option>
+          </Select>
+        </div>
+        <div class="option">
+          <CoverSetter />
+        </div>
+        <div class="option">
+          <Button>取消</Button>
+          <Button status="danger">提交</Button>
         </div>
       </template>
     </Container>
@@ -52,9 +60,26 @@ export default Vue.extend({
     visibility: hidden;
   }
 
-  .options {
-    button {
-      margin: 0 20px;
+  .option {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+      visibility: hidden;
+    }
+
+    .button {
+      width: 150px;
+      height: 40px;
+      font-weight: bold;
+      margin-right: 30px;
+      float: right;
     }
   }
 }
