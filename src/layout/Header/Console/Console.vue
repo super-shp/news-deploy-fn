@@ -1,8 +1,8 @@
 <template>
   <div class="console">
-    <a href="javascript:void(0)" class="menu">
+    <router-link to="/publish" class="menu">
       <Icon icon="pencil"/>
-    </a>
+    </router-link>
     <Search class="menu" />
     <a href="javascript:void(0)" class="menu">
       <Icon icon="bell"/>
