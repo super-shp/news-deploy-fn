@@ -8,7 +8,9 @@
       <Field label="密码">
         <Input type="password" />
       </Field>
-      <Button status="danger">登陆</Button>
+      <div class="option">
+        <Button status="danger">登陆</Button>
+      </div>
     </section>
   </div>
 </template>
@@ -22,8 +24,19 @@ export default Vue.extend({});
 .login-container {
   border-radius: 4px;
   width: 400px;
-  margin: 100px auto;
+  margin: 200px auto;
   padding: 30px;
   background-color: #fff;
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .option {
+    float: right;
+  }
 }
 </style>
