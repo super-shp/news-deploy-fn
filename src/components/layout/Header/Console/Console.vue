@@ -4,9 +4,6 @@
       <Icon icon="pencil"/>
     </router-link>
     <Search class="menu" />
-    <a href="javascript:void(0)" class="menu">
-      <Icon icon="bell"/>
-    </a>
     <Dropdown>
       <a class="selfinfo-trigger" slot="trigger">
         <span>{{getUserName}}</span>
@@ -14,8 +11,8 @@
       </a>
 
       <div v-if="!getLoginStatus">
-        <DropdownItem @click="login">登陆</DropdownItem>
-        <DropdownItem>注册</DropdownItem>
+        <DropdownItem @click="login"><router-link to="/login">登陆</router-link></DropdownItem>
+        <DropdownItem><router-link to="/register">注册</router-link></DropdownItem>
       </div>
       <div v-else>
         <DropdownItem>个人中心</DropdownItem>
