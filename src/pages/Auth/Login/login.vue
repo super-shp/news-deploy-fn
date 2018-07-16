@@ -24,7 +24,7 @@ export default Vue.extend({});
 .login-container {
   border-radius: 4px;
   width: 400px;
-  margin: 200px auto;
+  margin: 150px auto 0;
   padding: 30px;
   background-color: #fff;
 
