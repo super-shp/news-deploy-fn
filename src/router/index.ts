@@ -5,7 +5,9 @@ import { router as routerConfig } from './router';
 
 Vue.use(Router);
 
-const route = new Router(routerConfig);
+const route = new Router({
+  routes: routerConfig,
+});
 
 route.beforeEach(beforeEach);
 
