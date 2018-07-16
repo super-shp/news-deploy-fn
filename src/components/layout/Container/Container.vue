@@ -26,7 +26,7 @@ export default {};
   }
 
   .content {
-    padding: 101px 10px 120px;
+    padding: 60px 10px 120px;
     min-height: 100vh;
     margin-bottom: 0;
 

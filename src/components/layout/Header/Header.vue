@@ -9,13 +9,13 @@
           </div>
         </div>
       </header>
-      <nav class="column-nav" v-show="isTop">
+      <!-- <nav class="column-nav" v-show="isTop">
         <ul class="column-list">
           <li class="column-item" v-for="item in columnList">
             <a>{{item}}</a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
     </div>
   </div>
 </template>
