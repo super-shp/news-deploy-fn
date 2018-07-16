@@ -1,5 +1,6 @@
 import { RouteConfig } from 'vue-router';
 import { Login, Register } from '@/pages/Auth';
+import { Whoops } from '@/pages/404';
 
 export const router: RouteConfig[] = [
   {
@@ -28,5 +29,10 @@ export const router: RouteConfig[] = [
     },
     component: () =>
       import('@/pages/Publish').then(({ Publish }) => Promise.resolve(Publish)),
+  },
+  {
+    path: '/whoops',
+    name: 'whoops',
+    component: Whoops,
   },
 ];
