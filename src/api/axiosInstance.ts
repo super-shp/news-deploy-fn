@@ -14,18 +14,15 @@ const axiosInstance: AxiosInstance = axios.create({
 
 axiosInstance.interceptors.response.use(
   ({ data }) => {
-    const resData = data.data || null;
     // handle errorCode under this line
-    return resData;
+    return data;
   },
   error => {
     return Promise.reject(error);
   },
 );
 
-const TOKEN =
-  `eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsI` +
-  `mV4cCI6MTUzMTUzMDk1Mn0.4TRNCKRiMgA48dhJwffKi84oPqwvw6P1MJzxvsxOZf2FzU_SvET_kZuTOrgLHsbBtO-pCbevEif-sfbbkQ8m-A`;
+const TOKEN = `eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTMxODIzNjM3fQ.Lf5FNRsC7LryPs6XsoEBHERY1vw7ymr2YrKEzcNpHlYm94ESnb4iE4vnxt9h5HSMGfvpA7IQDBZ77LW6l7taOg`;
 
 axiosInstance.defaults.headers.common.Authorization = `Bearer ${TOKEN}`;
 
