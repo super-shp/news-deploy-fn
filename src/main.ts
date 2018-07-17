@@ -3,7 +3,7 @@ import { initUI } from '@/components';
 import { default as App } from './App.vue';
 import { router } from '@/router';
 import { store } from '@/store';
-import { mountConfig } from '@/config/vueConfig';
+import { mountConfig } from '@/config';
 
 // set config by env
 mountConfig(Vue);

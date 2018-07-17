@@ -1,6 +1,5 @@
 import { VueConstructor } from 'vue';
-
-export const isProd = process.env.NODE_ENV === 'production';
+import { isProd } from '@/util';
 
 export const devOption = {
   silent: false,
