@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <Container>
-      <Header slot="header"/>
-      <router-view slot="content" />
-      <Footer slot="footer"/>
+      <template slot="header">
+        <Header />
+      </template>
+      <template slot="content">
+        <router-view  />
+      </template>
+      <template slot="footer">
+        <Footer />
+      </template>
     </Container>
   </div>
 </template>
