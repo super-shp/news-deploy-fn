@@ -3,13 +3,13 @@
     <h3>登陆</h3>
     <section>
       <Field label="用户名">
-        <Input />
+        <Input v-model="username" />
       </Field>
       <Field label="密码">
-        <Input type="password" />
+        <Input type="password" v-model="password" />
       </Field>
       <div class="option">
-        <Button status="danger">登陆</Button>
+        <Button status="danger" @click="login">登陆</Button>
       </div>
     </section>
   </div>
@@ -17,7 +17,22 @@
 
 <script lang="ts">
 import Vue from 'vue';
-export default Vue.extend({});
+import { login } from './actions';
+
+export default Vue.extend({
+  data() {
+    return {
+      username: '',
+      password: '',
+    };
+  },
+  methods: {
+    async login() {
+      const data = await login(this.username, this.password);
+      console.log(data);
+    },
+  },
+});
 </script>
 
 <style lang="scss" scoped>

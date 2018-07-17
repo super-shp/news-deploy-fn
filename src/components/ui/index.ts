@@ -7,8 +7,17 @@ import { Input } from '@/components/ui/input';
 import { Modal } from '@/components/ui/modal';
 import 'buefy/lib/buefy.css';
 import './style.scss';
+console.log(Buefy);
 
-const { Icon, Dropdown, DropdownItem, Select, Field } = Buefy as any;
+const {
+  Icon,
+  Dropdown,
+  DropdownItem,
+  Select,
+  Field,
+  Tag,
+  Taginput,
+} = Buefy as any;
 
 export const initUI = (Vue: VueConstructor) => {
   Vue.use(VueHolder);
@@ -22,4 +31,9 @@ export const initUI = (Vue: VueConstructor) => {
   Vue.component('Modal', Modal);
   Vue.component('Select', Select);
   Vue.component('Field', Field);
+  Vue.component('TagInput', Taginput);
+
+  Vue.component('Tag', Tag);
+  // alias
+  Vue.component(Tag.name, Tag);
 };

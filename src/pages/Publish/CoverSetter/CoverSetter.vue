@@ -34,6 +34,11 @@ export default Vue.extend({
       cover: '',
     };
   },
+  watch: {
+    cover(data) {
+      this.$emit('input', data);
+    },
+  },
   methods: {
     resetStatus() {
       this.file = null;

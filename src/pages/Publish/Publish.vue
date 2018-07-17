@@ -5,19 +5,28 @@
         <h3>发布新闻</h3>
       </template>
       <template slot="content">
-        <Input placeholder="请输入标题..." v-model="title"/>
+        <div class="editor-title">
+          <Input placeholder="请输入标题..." v-model="title"/>
+        </div>
         <Editor
           v-model="content"
         />
         <hr>
         <div class="option">
           <h4>设置专栏</h4>
-          <Select placeholder="选择专栏">
-            <option value="test">测试</option>
-          </Select>
+          <TagInput
+            v-model="column"
+            :data="filteredTags"
+            autocomplete
+            icon="label"
+            :maxtags="1"
+            :allow-new="false"
+            placeholder="设置专栏"
+            @typing="getFilteredTags"
+          />
         </div>
         <div class="option">
-          <CoverSetter />
+          <CoverSetter v-model="cover" />
         </div>
         <div class="option">
           <Button>取消</Button>
@@ -42,12 +51,24 @@ export default Vue.extend({
   },
   data() {
     return {
+      filteredTags: [] as string[],
       title: '',
       content: convert('你好'),
       cover: '',
+      column: [],
     };
   },
-  methods: {},
+  methods: {
+    getFilteredTags(text: string) {
+      this.filteredTags = ['测试1', '测试2', '测试3'].filter(
+        option =>
+          option
+            .toString()
+            .toLowerCase()
+            .indexOf(text.toLowerCase()) >= 0,
+      );
+    },
+  },
 });
 </script>
 
@@ -62,6 +83,13 @@ export default Vue.extend({
 
   .option {
     margin-bottom: 20px;
+
+    .taginput {
+      width: 300px;
+
+      &.taginput-container .autocomplete .icon {
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -91,16 +119,22 @@ export default Vue.extend({
 
 <style lang="scss">
 .publish {
+  .editor-title {
+    .control {
+      .input {
+        padding-left: 15px;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+  }
   .control {
     .input {
       box-shadow: none;
       border-radius: 0;
       border: 0;
       border-bottom: 0;
-      padding-left: 15px;
-      font-weight: bold;
-      font-size: 24px;
-      text-align: center;
 
       &::placeholder {
         color: rgba(0, 0, 0, 0.6);
