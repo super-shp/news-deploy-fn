@@ -1,5 +1,7 @@
 <template>
-  <div id="hook" ref="hook"></div>
+  <div id="hook-wrapper">
+    <div ref="hook"></div>
+  </div>
 </template>
 
 <script lang="ts">

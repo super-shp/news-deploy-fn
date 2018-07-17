@@ -3,9 +3,14 @@ import { default as Hook } from './Hook.vue';
 import { Mount } from './Mount';
 
 export const HookComponent = ({ path }: any) => {
+  const mountOps = new Mount({ path });
+  const name = path.split('/')[0];
   // @ts-ignore
-  return Vue.extend({
+  const mount = Vue.extend({
+    name: `${name}`,
     mixins: [Hook],
-    ...new Mount({ path }),
+    ...mountOps,
   });
+
+  return mount;
 };

@@ -1,7 +1,9 @@
-import { default as Vue } from 'vue';
 import { default as MainPage } from './MainPage.vue';
+import { vueMount } from '@/util/mount';
 
 export const hookMainPage = () => ({
   component: MainPage,
-  mount: Vue.prototype.$mount,
+  mount: vueMount,
 });
+
+export { default as MainPage } from './MainPage.vue';

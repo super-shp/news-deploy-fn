@@ -1,6 +1,13 @@
-import { store } from '@/store';
-import { store as Publishx, PublishState } from '@/pages/Publish/store';
+import { store as Publishx, PublishState } from './store';
 
-store.registerModule<PublishState>(['Publish'], Publishx);
+import { default as Publish } from './Publish.vue';
+import { Store } from 'vuex';
+import { vueMount } from '@/util/mount';
 
-export { default as Publish } from './Publish.vue';
+export const hookPublish = ({ store }: any) => {
+  (store as Store<any>).registerModule<PublishState>(['Publish'], Publishx);
+  return {
+    component: Publish,
+    mount: vueMount,
+  };
+};

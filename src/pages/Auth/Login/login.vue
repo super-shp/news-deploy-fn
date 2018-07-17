@@ -29,7 +29,6 @@ export default Vue.extend({
   methods: {
     async login() {
       const data = await login(this.username, this.password);
-      console.log(data);
     },
   },
 });
