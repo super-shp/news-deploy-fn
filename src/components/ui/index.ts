@@ -7,7 +7,6 @@ import { Input } from '@/components/ui/input';
 import { Modal } from '@/components/ui/modal';
 import 'buefy/lib/buefy.css';
 import './style.scss';
-console.log(Buefy);
 
 const {
   Icon,

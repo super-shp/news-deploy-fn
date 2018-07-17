@@ -1,5 +1,5 @@
 import { store } from '@/store';
-import { store as Publishx, PublishState } from './store';
+import { store as Publishx, PublishState } from '@/pages/Publish/store';
 
 store.registerModule<PublishState>(['Publish'], Publishx);
 

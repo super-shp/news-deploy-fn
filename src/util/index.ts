@@ -1,3 +1,3 @@
-export * from './env';
-export * from './type';
-export * from './tool';
+export * from '@/util/env';
+export * from '@/util/type';
+export * from '@/util/tool';
