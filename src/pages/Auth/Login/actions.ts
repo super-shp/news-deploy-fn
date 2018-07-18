@@ -2,7 +2,7 @@ import { api } from '@/api';
 
 export const URL = {
   LOGIN: 'login',
-  GET_USER_INFO: 'getinfo',
+  GET_USER_INFO: '/auth/getinfo',
 };
 
 export const login = async (username: string, password: string) => {
