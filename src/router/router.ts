@@ -1,6 +1,5 @@
 import { RouteConfig } from 'vue-router';
 import { HookComponent } from './micro';
-import { Login, Register } from '@/pages/Auth';
 
 export const router: RouteConfig[] = [
   {
@@ -15,12 +14,12 @@ export const router: RouteConfig[] = [
   {
     path: '/login',
     name: 'login',
-    component: Login,
+    component: HookComponent({ path: 'Auth/hookLogin' }),
   },
   {
     path: '/register',
     name: 'register',
-    component: Register,
+    component: HookComponent({ path: 'Auth/hookRegister' }),
   },
   {
     path: '/publish',

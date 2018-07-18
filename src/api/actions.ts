@@ -1,4 +1,5 @@
-import { UPLOAD_IMG, api } from '@/api';
+import { api } from './axiosInstance';
+import { UPLOAD_IMG } from './url';
 
 export const uploadImg = async (file: File) => {
   const formData: FormData = new FormData();

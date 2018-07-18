@@ -1,4 +1,9 @@
-import { state, actions, mutations, PublishState } from './store';
+import {
+  publishState as state,
+  actions,
+  mutations,
+  PublishState,
+} from './store';
 import { Module } from 'vuex';
 
 export const store: Module<PublishState, any> = {
