@@ -1,5 +1,6 @@
-import { default as axios, AxiosInstance } from 'axios';
+import { default as axios, AxiosInstance, AxiosResponse } from 'axios';
 import { default as Router, RouteConfig, Route } from 'vue-router';
+import { default as qs } from 'qs';
 import { BASE_URL } from '@/config';
 import { router } from '@/router';
 
@@ -8,16 +9,40 @@ const axiosInstance: AxiosInstance = axios.create({
   timeout: 10000,
   transformRequest: [
     (data, headers) => {
+      if (!headers.Authorization) {
+        const auth = getAuth();
+        if (auth) {
+          headers.Authorization = auth;
+        }
+      }
       return data;
+    },
+    (data, headers) => {
+      if (headers['Content-Type'] === undefined) {
+        return JSON.stringify(data);
+      } else {
+        return data;
+      }
     },
   ],
 });
 
 axiosInstance.interceptors.response.use(
   data => {
-    const resData = data.data;
+    setAuth(data);
+    const loginConfig = getLoginHash(router, 'login');
+    const { path } = loginConfig;
+    const hash = window.location.hash;
+    if (hash.indexOf(path) >= 0) {
+      Object.assign(data, {
+        data: {
+          errorCode: 201,
+          data: {},
+        },
+      });
+    }
     // handle errorCode under this line
-    return data;
+    return data.data;
   },
   error => {
     const { response } = error;
@@ -43,6 +68,26 @@ axiosInstance.interceptors.response.use(
   },
 );
 
+function setAuth(data: AxiosResponse<any>) {
+  const { headers } = data;
+  const { authorization } = headers;
+  if (authorization) {
+    const current = window.localStorage.getItem('auth');
+    if (current !== authorization) {
+      window.localStorage.setItem('auth', authorization);
+    }
+  }
+}
+
+function getAuth(): string {
+  const current = window.localStorage.getItem('auth');
+  if (!current) {
+    return '';
+  } else {
+    return current;
+  }
+}
+
 function getLoginHash(route: any, name: string): RouteConfig {
   const { options } = route;
   const { routes } = options;
@@ -53,8 +98,9 @@ function getLoginHash(route: any, name: string): RouteConfig {
   return loginRouteConfig;
 }
 
-const TOKEN = `eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNTMxODIzNjM3fQ.Lf5FNRsC7LryPs6XsoEBHERY1vw7ymr2YrKEzcNpHlYm94ESnb4iE4vnxt9h5HSMGfvpA7IQDBZ77LW6l7taOg`;
 
-axiosInstance.defaults.headers.common.Authorization = `Bearer ${TOKEN}`;
+// axiosInstance.defaults.headers.post.Authorization = `Bearer ${TOKEN}`;
+axiosInstance.defaults.headers.post['Content-Type'] =
+  'application/json;charset=UTF-8';
 
 export const api = axiosInstance;

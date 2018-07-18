@@ -59,6 +59,12 @@ export default Vue.extend({
     };
   },
   methods: {
+    publish() {
+      const { title, content, cover, column } = this;
+      if (title && content && cover && column) {
+        
+      }
+    },
     getFilteredTags(text: string) {
       this.filteredTags = ['测试1', '测试2', '测试3'].filter(
         option =>

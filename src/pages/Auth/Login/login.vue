@@ -17,7 +17,8 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { login } from './actions';
+import { login, getUserInfo } from './actions';
+import { ERROR } from '@/api';
 
 export default Vue.extend({
   data() {
@@ -28,7 +29,12 @@ export default Vue.extend({
   },
   methods: {
     async login() {
-      const data = await login(this.username, this.password);
+      const data: any = await login(this.username, this.password);
+      if (data.errorCode === ERROR.SUCCESS) {
+        const userInfo = await getUserInfo();
+
+        console.log(userInfo);
+      }
     },
   },
 });

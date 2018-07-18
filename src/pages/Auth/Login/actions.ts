@@ -2,6 +2,7 @@ import { api } from '@/api';
 
 export const URL = {
   LOGIN: 'login',
+  GET_USER_INFO: 'getinfo',
 };
 
 export const login = async (username: string, password: string) => {
@@ -12,3 +13,5 @@ export const login = async (username: string, password: string) => {
 
   return data;
 };
+
+export const getUserInfo = async () => await api.get(URL.GET_USER_INFO);
