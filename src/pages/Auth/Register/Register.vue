@@ -6,7 +6,7 @@
       <Input v-model="username" />
     </Field>
     <Field label="密码">
-      <Input v-model="password" />
+      <Input type="password" v-model="password" />
     </Field>
     <Field label="昵称">
       <Input v-model="author" />
@@ -22,6 +22,7 @@
 import { default as Vue } from 'vue';
 import { signUp } from './actions';
 import { required, minLength, between } from 'vuelidate/lib/validators';
+import { ERROR } from '@/api';
 
 export default Vue.extend({
   data() {
@@ -31,17 +32,31 @@ export default Vue.extend({
       author: '',
     };
   },
-
+  validations: {
+    username: {
+      required,
+      minLength: minLength(4)
+    },
+    password: {
+      required,
+      minLength: minLength(6)
+    },
+    author: {
+      required,
+      minLength: minLength(4)
+    },
+  },
   methods: {
     async signup() {
-      const { username, password, author } = this;
+      const { username, password, author } = this as any;
+      console.log("call the signup function");
       if (username && password && author) {
         const data = await signUp(username, password, author);
         console.log(data);
       }
     },
   },
-});
+} as any);
 </script>
 
 <style lang="scss" scoped>
