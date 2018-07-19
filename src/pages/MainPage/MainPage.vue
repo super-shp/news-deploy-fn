@@ -36,7 +36,7 @@ export default Vue.extend({
     const { data } = await getColumn();
     const { columnList } = data;
     this.columnList = columnList;
-    window.localStorage.setItem('columnList', columnList);
+    window.localStorage.setItem('columnList', JSON.stringify(columnList));
   },
 });
 </script>

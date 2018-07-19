@@ -30,7 +30,7 @@
         </div>
         <div class="option">
           <Button>取消</Button>
-          <Button status="danger">提交</Button>
+          <Button status="danger" @click="publish">提交</Button>
         </div>
       </template>
     </Container>
@@ -43,6 +43,7 @@ import { Container } from './Container';
 import { Editor, convert } from '@/components/Editor';
 import { CoverSetter } from './CoverSetter';
 import * as actions from './actions';
+import { getColumn } from '@/api';
 
 export default Vue.extend({
   components: {
@@ -50,10 +51,23 @@ export default Vue.extend({
     Editor,
     CoverSetter,
   },
-  mounted() {},
+  async mounted() {
+    const storagedList = window.localStorage.getItem('columnList');
+    let columnList = JSON.parse(storagedList as any);
+    if (!columnList) {
+      const { data } = await getColumn();
+      columnList = data.columnList;
+      window.localStorage.setItem('columnList', JSON.stringify(columnList));
+    }
+
+    if (this.columnList.length === 0) {
+      columnList.forEach((item: any) => this.columnList.push(item));
+    }
+  },
   data() {
     return {
       filteredTags: [] as string[],
+      columnList: [] as any[],
       title: '',
       content: convert('你好'),
       cover: '',
@@ -61,19 +75,34 @@ export default Vue.extend({
     };
   },
   methods: {
-    publish() {
+    async publish() {
       const { title, content, cover, column } = this;
-      if (title && content && cover && column) {
+      if (title && content && cover && column.length) {
+        const columnInfo = this.columnList.filter(
+          col => col.region_name === column[0],
+        )[0];
+        const { cid } = columnInfo;
+        const data = await actions.publish({
+          title,
+          cid,
+          content,
+          cover,
+        });
+        console.log(data);
       }
     },
     getFilteredTags(text: string) {
-      this.filteredTags = ['测试1', '测试2', '测试3'].filter(
-        option =>
-          option
-            .toString()
-            .toLowerCase()
-            .indexOf(text.toLowerCase()) >= 0,
-      );
+      this.filteredTags = this.columnList
+        .filter(colObserver => {
+          const region_name = colObserver.region_name;
+          return (
+            region_name
+              .toString()
+              .toLowerCase()
+              .indexOf(text.toLowerCase()) >= 0
+          );
+        })
+        .map(item => item.region_name);
     },
   },
 });
