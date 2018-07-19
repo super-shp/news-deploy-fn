@@ -1,1 +1,1 @@
-export { Image } from '@/components/Editor/blots/image';
+export { Image } from '@/components/Editor/blots/Image/image';

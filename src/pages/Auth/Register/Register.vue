@@ -34,24 +34,9 @@ export default Vue.extend({
       author: '',
     };
   },
-  validations: {
-    username: {
-      required,
-      minLength: minLength(4),
-    },
-    password: {
-      required,
-      minLength: minLength(6),
-    },
-    author: {
-      required,
-      minLength: minLength(4),
-    },
-  },
   methods: {
     async signup() {
       const { username, password, author } = this as any;
-      console.log('call the signup function');
       if (username && password && author) {
         const data: any = await signUp(username, password, author);
         if (data.code === 200) {
@@ -61,10 +46,6 @@ export default Vue.extend({
           alert('您有未完成的选项');
         }
       }
-    },
-    setUserName(value) {
-      this.username = value;
-      this.$v.username.$touch();
     },
   },
 } as any);

@@ -1,5 +1,5 @@
 import { api } from '@/api';
-import Axios from '../../../../node_modules/axios';
+import Axios from 'axios';
 
 export const URL = {
   LOGIN: 'login',
