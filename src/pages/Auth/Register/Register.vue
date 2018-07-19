@@ -21,6 +21,7 @@
 <script lang="ts">
 import { default as Vue } from 'vue';
 import { signUp } from './actions';
+import { required, minLength, between } from 'vuelidate/lib/validators';
 
 export default Vue.extend({
   data() {
