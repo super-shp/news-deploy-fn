@@ -46,8 +46,6 @@ export default Vue.extend({
         // instance
         this.editor = new Quill(this.$refs.editor as HTMLElement, editorOptions);
 
-        this.editor.enable(false);
-
         // set editor content
         if (!this.disabled) {
           this.editor.enable(true);

@@ -55,7 +55,7 @@ export default Vue.extend({
   props: ['info'],
   methods: {
     navToDetail() {
-      this.$router.push(`/detail/${this.info.pid}`);
+      this.$router.push(`/news-detail/${this.info.pid}`);
     },
   },
 });

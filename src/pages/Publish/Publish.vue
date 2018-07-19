@@ -40,7 +40,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { router } from '@/router';
-import { Container } from './Container';
+import { Container } from '@/components/layout/EditorContainer';
 import { Editor, convert } from '@/components/Editor';
 import { CoverSetter } from './CoverSetter';
 import * as actions from './actions';
@@ -154,9 +154,6 @@ export default Vue.extend({
     }
   }
 }
-</style>
-
-<style lang="scss" scoped>
 </style>
 
 

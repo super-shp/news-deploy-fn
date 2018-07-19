@@ -18,9 +18,11 @@
 <script lang="ts">
 import Vue from 'vue';
 import { login, getUserInfo } from './actions';
+import { router } from '@/router';
 import { ERROR } from '@/api';
 
 export default Vue.extend({
+  router,
   data() {
     return {
       username: '',
@@ -36,6 +38,7 @@ export default Vue.extend({
         const { errorCode } = userInfo as any;
 
         if (errorCode === ERROR.SUCCESS) {
+          window.localStorage.setItem('userInfo', JSON.stringify(userInfo));
           this.$router.push('/');
         }
       }
