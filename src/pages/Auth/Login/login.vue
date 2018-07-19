@@ -33,7 +33,11 @@ export default Vue.extend({
       if (data.errorCode === ERROR.SUCCESS) {
         const userInfo = await getUserInfo();
 
-        console.log(userInfo);
+        const { errorCode } = userInfo as any;
+
+        if (errorCode === ERROR.SUCCESS) {
+          this.$router.push('/');
+        }
       }
     },
   },
