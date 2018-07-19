@@ -3,10 +3,12 @@
   <section>
     <h3>注册会员</h3>
     <Field label="用户名">
-      <Input v-model="username" />
+      <Input v-model.trim="username" @input="setUserName($event.target.value)"/>
+      <div class="error" v-if="!$v.username.required">Field is required</div>
+      <div class="error" v-if="!$v.username.minLength">Name must have at least {{$v.username.$params.minLength.min}} letters.</div>
     </Field>
     <Field label="密码">
-      <Input v-model="password" />
+      <Input type="password" v-model="password" />
     </Field>
     <Field label="昵称">
       <Input v-model="author" />
@@ -32,10 +34,24 @@ export default Vue.extend({
       author: '',
     };
   },
-
+  validations: {
+    username: {
+      required,
+      minLength: minLength(4),
+    },
+    password: {
+      required,
+      minLength: minLength(6),
+    },
+    author: {
+      required,
+      minLength: minLength(4),
+    },
+  },
   methods: {
     async signup() {
-      const { username, password, author } = this;
+      const { username, password, author } = this as any;
+      console.log('call the signup function');
       if (username && password && author) {
         const data: any = await signUp(username, password, author);
         if (data.code === 200) {
@@ -46,8 +62,12 @@ export default Vue.extend({
         }
       }
     },
+    setUserName(value) {
+      this.username = value;
+      this.$v.username.$touch();
+    },
   },
-});
+} as any);
 </script>
 
 <style lang="scss" scoped>
