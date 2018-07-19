@@ -39,13 +39,15 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { router } from '@/router';
 import { Container } from './Container';
 import { Editor, convert } from '@/components/Editor';
 import { CoverSetter } from './CoverSetter';
 import * as actions from './actions';
-import { getColumn } from '@/api';
+import { getColumn, ERROR } from '@/api';
 
 export default Vue.extend({
+  router,
   components: {
     Container,
     Editor,
@@ -69,7 +71,7 @@ export default Vue.extend({
       filteredTags: [] as string[],
       columnList: [] as any[],
       title: '',
-      content: convert('你好'),
+      content: convert(''),
       cover: '',
       column: [],
     };
@@ -82,13 +84,18 @@ export default Vue.extend({
           col => col.region_name === column[0],
         )[0];
         const { cid } = columnInfo;
-        const data = await actions.publish({
+        const data: any = await actions.publish({
           title,
           cid,
           content,
           cover,
         });
-        console.log(data);
+        if (data.code === 200) {
+          alert('提交成功');
+          this.$router.push('/');
+        } else {
+          alert('发布失败');
+        }
       }
     },
     getFilteredTags(text: string) {

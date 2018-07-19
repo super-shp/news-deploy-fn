@@ -1,9 +1,8 @@
 <template>
   <div class="article-list">
-    <NewCard />
-    <NewCard />
-    <NewCard />
-    <NewCard />
+    <template v-for="article in articleList">
+      <NewCard :info="article" />
+    </template>
     <a class="load-more">加载更多</a>
   </div>
 </template>
@@ -13,6 +12,7 @@ import Vue from 'vue';
 import { NewCard } from './New';
 
 export default Vue.extend({
+  props: ['articleList'],
   components: {
     NewCard,
   },

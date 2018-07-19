@@ -21,8 +21,10 @@
 <script lang="ts">
 import { default as Vue } from 'vue';
 import { signUp } from './actions';
+import { router } from '@/router';
 
 export default Vue.extend({
+  router,
   data() {
     return {
       username: '',
@@ -35,8 +37,13 @@ export default Vue.extend({
     async signup() {
       const { username, password, author } = this;
       if (username && password && author) {
-        const data = await signUp(username, password, author);
-        console.log(data);
+        const data: any = await signUp(username, password, author);
+        if (data.code === 200) {
+          alert('注册成功');
+          router.push('/');
+        } else {
+          alert('您有未完成的选项');
+        }
       }
     },
   },

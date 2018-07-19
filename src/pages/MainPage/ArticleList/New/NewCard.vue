@@ -18,18 +18,18 @@
         </Dropdown>
     </header>
     <div class="banner">
-      <a class="banner-link">
-        <iImage :imgStyle="{height: '240px', width:'718px'}" placeholder="718x240" src="https://cdn.sspai.com/article/816cd264-4b3e-81e9-d487-bdc42955b688.jpg?imageMogr2/quality/95/thumbnail/!1440x480r/gravity/Center/crop/1440x480"></iImage>
+      <a @click.stop="navToDetail" class="banner-link">
+        <iImage :imgStyle="{height: '240px', width:'718px'}" placeholder="718x240" :src="info.cover"></iImage>
       </a>
     </div>
     <section class="card-info">
         <h3>
-            <a>
-            本期「福利派」包含了少数派定制周边，Power+ 定制 T 恤，效率新手包和付费栏目，若饭 V3.1、iSlide 特约优惠，活动在下周一结束。
+            <a  @click.stop="navToDetail">
+            {{info.title}}
             </a>
           </h3>
         <summary class="desc">
-          本期「福利派」包含了少数派定制周边，Power+ 定制 T 恤，效率新手包和付费栏目，若饭 V3.1、iSlide 特约优惠，活动在下周一结束。
+          {{info.intro || 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsa culpa doloribus hic accusantium' }}
         </summary>
     </section>
     <footer class="meta">
@@ -49,7 +49,16 @@
 
 <script lang="ts">
 import Vue from 'vue';
-export default Vue.extend({});
+import { router } from '@/router';
+export default Vue.extend({
+  router,
+  props: ['info'],
+  methods: {
+    navToDetail() {
+      this.$router.push(`/detail/${this.info.pid}`);
+    },
+  },
+});
 </script>
 
 <style lang="scss" scoped>

@@ -34,4 +34,9 @@ export const router: RouteConfig[] = [
     name: 'whoops',
     component: HookComponent({ path: 'NotFound/hookWhoops' }),
   },
+  {
+    path: '/news-detail',
+    name: 'newsDetail',
+    component: HookComponent({ path: 'NewsDetail/hookNewsDetail' }),
+  },
 ];

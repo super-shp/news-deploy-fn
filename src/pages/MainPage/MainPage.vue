@@ -3,7 +3,7 @@
   <TopBanner />
   <MainLayout>
     <template slot="main">
-      <ArticleList />
+      <ArticleList :articleList="articleList" />
     </template>
     <template slot="side">
       <ColumnList :columnList="columnList" />
@@ -19,6 +19,7 @@ import { MainLayout } from './MainLayout';
 import { ArticleList } from './ArticleList';
 import { ColumnList } from './ColumnList';
 import { getColumn } from '@/api';
+import * as actions from './actions';
 
 export default Vue.extend({
   components: {
@@ -30,6 +31,10 @@ export default Vue.extend({
   data() {
     return {
       columnList: [],
+      articleList: [] as any[],
+      total: 0,
+      offset: 0,
+      current: 1,
     };
   },
   async mounted() {
@@ -37,6 +42,14 @@ export default Vue.extend({
     const { columnList } = data;
     this.columnList = columnList;
     window.localStorage.setItem('columnList', JSON.stringify(columnList));
+
+    const res = await actions.getArticleList(1);
+    const { articleList, offset, total } = res as any;
+    this.offset = offset;
+    this.total = total;
+    articleList.forEach((article: any) => {
+      this.articleList.push(article);
+    });
   },
 });
 </script>
