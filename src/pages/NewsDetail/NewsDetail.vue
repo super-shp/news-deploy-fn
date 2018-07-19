@@ -125,4 +125,14 @@ export default Vue.extend({
 }
 </style>
 
+<style lang="scss">
+.news-detail {
+  .quill-editor .ql-container.ql-snow {
+    height: unset;
+    min-height: 500px;
+  }
+}
+</style>
+
+
 

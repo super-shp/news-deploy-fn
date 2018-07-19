@@ -1,3 +1,5 @@
+import { isString } from './type';
+
 /**
  * return el found by querySelector
  * @param el
@@ -14,3 +16,11 @@ export function query(el: string | Element): Element {
     return el;
   }
 }
+
+export const isBase64 = (source: any) => {
+  if (isString(source) && source.indexOf('data:image/jpg;base64,') > -1) {
+    return true;
+  } else {
+    return false;
+  }
+};

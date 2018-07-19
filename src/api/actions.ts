@@ -2,7 +2,6 @@ import { api } from '@/api/axiosInstance';
 import { UPLOAD_IMG, GET_COLUMN } from '@/api/url';
 
 export const uploadImg = async (file: File) => {
-  console.log(file);
   const formData: FormData = new FormData();
   formData.append('uploadImg', file);
   const { data } = await api.post<string>(UPLOAD_IMG, formData, {

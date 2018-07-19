@@ -1,0 +1,1 @@
+import { uploadImg } from '@/api';

@@ -1,11 +1,14 @@
 import { default as Quill } from 'quill';
+import { isBase64 } from '@/util';
+import { uploadImg } from '@/api';
 
 const Embed = Quill.import('blots/embed');
 
 const ATTRIBUTES = ['alt', 'height', 'width'];
 
 const PLACE_HOLDER = {
-  UPLOADING: 'http://placehold.it/300x200/dddddd.jpg/ffffff?text=Picture+uploading',
+  UPLOADING:
+    'http://placehold.it/300x200/dddddd.jpg/ffffff?text=Picture+uploading',
 };
 
 export class Image extends Embed {
@@ -15,8 +18,9 @@ export class Image extends Embed {
   public static create(value: any) {
     const node = super.create(value);
     if (typeof value === 'string') {
+      node.setAttribute('src', value);
+    } else {
       node.setAttribute('src', PLACE_HOLDER.UPLOADING);
-      // node.setAttribute('src', value);
     }
     return node;
   }
