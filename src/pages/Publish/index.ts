@@ -1,4 +1,4 @@
-import { store as Publishx, PublishState } from './store';
+import { store as Publishx, PublishState } from '@/pages/Publish/store';
 
 import { default as Publish } from './Publish.vue';
 import { Store } from 'vuex';

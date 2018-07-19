@@ -1,4 +1,4 @@
-export { api } from './axiosInstance';
-export * from './url';
-export * from './actions';
-export * from './exception';
+export { api } from '@/api/axiosInstance';
+export * from '@/api/url';
+export * from '@/api/actions';
+export * from '@/api/exception';

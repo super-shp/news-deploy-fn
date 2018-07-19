@@ -3,7 +3,7 @@ import {
   actions,
   mutations,
   PublishState,
-} from './store';
+} from '@/pages/Publish/store/store';
 import { Module } from 'vuex';
 
 export const store: Module<PublishState, any> = {
@@ -14,4 +14,4 @@ export const store: Module<PublishState, any> = {
   actions,
 };
 
-export { PublishState } from './store';
+export { PublishState } from '@/pages/Publish/store/store';

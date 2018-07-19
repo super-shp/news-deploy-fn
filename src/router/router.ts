@@ -1,5 +1,5 @@
 import { RouteConfig } from 'vue-router';
-import { HookComponent } from './micro';
+import { HookComponent } from '@/router/micro';
 
 export const router: RouteConfig[] = [
   {

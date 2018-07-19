@@ -42,6 +42,7 @@ import Vue from 'vue';
 import { Container } from './Container';
 import { Editor, convert } from '@/components/Editor';
 import { CoverSetter } from './CoverSetter';
+import * as actions from './actions';
 
 export default Vue.extend({
   components: {
@@ -49,6 +50,7 @@ export default Vue.extend({
     Editor,
     CoverSetter,
   },
+  mounted() {},
   data() {
     return {
       filteredTags: [] as string[],
@@ -62,7 +64,6 @@ export default Vue.extend({
     publish() {
       const { title, content, cover, column } = this;
       if (title && content && cover && column) {
-        
       }
     },
     getFilteredTags(text: string) {

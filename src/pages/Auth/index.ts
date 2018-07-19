@@ -1,5 +1,5 @@
-import { Login } from './Login';
-import { Register } from './Register';
+import { Login } from '@/pages/Auth/Login';
+import { Register } from '@/pages/Auth/Register';
 import { vueMount } from '@/util/mount';
 
 export const hookLogin = () => ({

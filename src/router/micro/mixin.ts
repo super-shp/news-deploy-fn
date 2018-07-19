@@ -1,6 +1,6 @@
 import { default as Vue } from 'vue';
 import { default as Hook } from './Hook.vue';
-import { Mount } from './Mount';
+import { Mount } from '@/router/micro/Mount';
 
 export const HookComponent = ({ path }: any) => {
   const mountOps = new Mount({ path });

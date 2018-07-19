@@ -1,5 +1,5 @@
 import { isString } from 'util';
-import { moduleList } from './moduleList';
+import { moduleList } from '@/router/micro/moduleList';
 import { store } from '@/store';
 
 declare type Cons<T, S = {}> = {

@@ -3,16 +3,16 @@
   <section>
     <h3>注册会员</h3>
     <Field label="用户名">
-      <Input />
+      <Input v-model="username" />
     </Field>
     <Field label="密码">
-      <Input />
+      <Input v-model="password" />
     </Field>
     <Field label="昵称">
-      <Input />
+      <Input v-model="author" />
     </Field>
     <div class="option">
-      <Button status="danger">注册</Button>
+      <Button status="danger" @click="signup">注册</Button>
     </div>
   </section>
 </div>
@@ -20,7 +20,27 @@
 
 <script lang="ts">
 import { default as Vue } from 'vue';
-export default Vue.extend({});
+import { signUp } from './actions';
+
+export default Vue.extend({
+  data() {
+    return {
+      username: '',
+      password: '',
+      author: '',
+    };
+  },
+
+  methods: {
+    async signup() {
+      const { username, password, author } = this;
+      if (username && password && author) {
+        const data = await signUp(username, password, author);
+        console.log(data);
+      }
+    },
+  },
+});
 </script>
 
 <style lang="scss" scoped>

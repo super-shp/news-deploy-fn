@@ -1,6 +1,6 @@
 import { Delta } from 'quill';
 import { convert } from '@/components/Editor';
-import * as types from './mutation-types';
+import * as types from '@/pages/Publish/store/mutation-types';
 import { ActionContext, ActionTree, MutationTree } from 'vuex';
 
 export interface PublishState {

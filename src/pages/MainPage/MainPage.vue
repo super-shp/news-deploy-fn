@@ -6,7 +6,7 @@
       <ArticleList />
     </template>
     <template slot="side">
-      <ColumnList />
+      <ColumnList :columnList="columnList" />
     </template>
   </MainLayout>
 </div>
@@ -18,6 +18,7 @@ import { TopBanner } from './TopBanner';
 import { MainLayout } from './MainLayout';
 import { ArticleList } from './ArticleList';
 import { ColumnList } from './ColumnList';
+import { getColumn } from '@/api';
 
 export default Vue.extend({
   components: {
@@ -25,6 +26,17 @@ export default Vue.extend({
     MainLayout,
     ArticleList,
     ColumnList,
+  },
+  data() {
+    return {
+      columnList: [],
+    };
+  },
+  async mounted() {
+    const { data } = await getColumn();
+    const { columnList } = data;
+    this.columnList = columnList;
+    window.localStorage.setItem('columnList', columnList);
   },
 });
 </script>

@@ -4,44 +4,24 @@
       <h3>推荐专题</h3>
     </header>
     <section class="column-detail">
-      <a class="column-card">
-        <iImage :imgStyle="{width: '290px', height: '160px'}" placeholder="290x160"  src="https://cdn.sspai.com/topic/02a2cecc-f6cd-4813-c0de-52efc66d76da.jpg?imageMogr2/quality/95/thumbnail/!828x445r/gravity/Center/crop/828x445" /> 
-        <div class="mask">
-          <h4>把 Mac 菜单栏变成万能工具箱</h4>
-          <a class="btn">查看专题</a>
-        </div>
+      <template v-for="col in columnList">
+        <a class="column-card">
+          <iImage :imgStyle="{width: '290px', height: '160px'}" placeholder="290x160"  src="https://cdn.sspai.com/topic/02a2cecc-f6cd-4813-c0de-52efc66d76da.jpg?imageMogr2/quality/95/thumbnail/!828x445r/gravity/Center/crop/828x445" /> 
+          <div class="mask">
+            <h4>{{col.region_name}}</h4>
+            <a class="btn">查看专题</a>
+          </div>
       </a>
-
-      <a class="column-card">
-        <iImage :imgStyle="{width: '290px', height: '160px'}" placeholder="290x160"  src="https://cdn.sspai.com/topic/02a2cecc-f6cd-4813-c0de-52efc66d76da.jpg?imageMogr2/quality/95/thumbnail/!828x445r/gravity/Center/crop/828x445" /> 
-        <div class="mask">
-          <h4>把 Mac 菜单栏变成万能工具箱</h4>
-          <a class="btn">查看专题</a>
-        </div>
-      </a>
-
-      <a class="column-card">
-        <iImage :imgStyle="{width: '290px', height: '160px'}" placeholder="290x160"  src="https://cdn.sspai.com/topic/02a2cecc-f6cd-4813-c0de-52efc66d76da.jpg?imageMogr2/quality/95/thumbnail/!828x445r/gravity/Center/crop/828x445" /> 
-        <div class="mask">
-          <h4>把 Mac 菜单栏变成万能工具箱</h4>
-          <a class="btn">查看专题</a>
-        </div>
-      </a>
-
-      <a class="column-card">
-        <iImage :imgStyle="{width: '290px', height: '160px'}" placeholder="290x160"  src="https://cdn.sspai.com/topic/02a2cecc-f6cd-4813-c0de-52efc66d76da.jpg?imageMogr2/quality/95/thumbnail/!828x445r/gravity/Center/crop/828x445" /> 
-        <div class="mask">
-          <h4>把 Mac 菜单栏变成万能工具箱</h4>
-          <a class="btn">查看专题</a>
-        </div>
-      </a>
+      </template>
     </section>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-export default Vue.extend({});
+export default Vue.extend({
+  props: ['columnList'],
+});
 </script>
 
 <style lang="scss" scoped>
