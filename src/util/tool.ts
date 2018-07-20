@@ -1,4 +1,4 @@
-import { isString } from './type';
+import { isString } from '@/util/type';
 
 /**
  * return el found by querySelector
