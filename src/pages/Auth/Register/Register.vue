@@ -3,9 +3,7 @@
   <section>
     <h3>注册会员</h3>
     <Field label="用户名">
-      <Input v-model.trim="username" @input="setUserName($event.target.value)"/>
-      <div class="error" v-if="!$v.username.required">Field is required</div>
-      <div class="error" v-if="!$v.username.minLength">Name must have at least {{$v.username.$params.minLength.min}} letters.</div>
+      <Input v-model="username"/>
     </Field>
     <Field label="密码">
       <Input type="password" v-model="password" />
