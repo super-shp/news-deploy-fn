@@ -54,7 +54,7 @@ export default Vue.extend({
         const controlHeight = clientHeight * 1.5;
         const { bottom } = pos;
         if (bottom < controlHeight) {
-          this.loadArticle();
+          this.loadArticle(this.offset);
         }
       }
     },
