@@ -98,7 +98,6 @@ function getLoginHash(route: any, name: string): RouteConfig {
   return loginRouteConfig;
 }
 
-
 // axiosInstance.defaults.headers.post.Authorization = `Bearer ${TOKEN}`;
 axiosInstance.defaults.headers.post['Content-Type'] =
   'application/json;charset=UTF-8';

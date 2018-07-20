@@ -31,14 +31,26 @@ export default Vue.extend({
   components: {
     Search,
   },
-  props: {
-    username: String,
+  data() {
+    return {
+      username: '',
+    };
   },
   methods: {
     logout() {
       window.localStorage.setItem('auth', '');
       alert('退出成功');
       this.$router.push('/');
+    },
+  },
+  watch: {
+    $route() {
+      const info = window.localStorage.getItem('auth');
+      if (info) {
+        this.username = 'root';
+      } else {
+        this.username = '';
+      }
     },
   },
   computed: {

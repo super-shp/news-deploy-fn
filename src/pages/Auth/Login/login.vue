@@ -34,7 +34,6 @@ export default Vue.extend({
       const data: any = await login(this.username, this.password);
       if (data.errorCode === ERROR.SUCCESS) {
         const userInfo = await getUserInfo();
-
         const { errorCode } = userInfo as any;
 
         if (errorCode === ERROR.SUCCESS) {
